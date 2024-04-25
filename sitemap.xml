@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/about/index.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/text.html</loc>
+    
+    <lastmod>2024-04-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/schedule/index.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/tags/index.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/categories/index.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/categories/index.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/tags/index.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/404/index.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/about/index.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/hello-world.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/text1.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -47,16 +56,7 @@
   </url>
   
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/text1.html</loc>
-    
-    <lastmod>2024-04-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://mqlgthbsakuradream.github.io/text.html</loc>
+    <loc>http://ymqlgthbsakuradream.github.io/404/index.html</loc>
     
     <lastmod>2024-04-24</lastmod>
     
@@ -66,13 +66,34 @@
   
 
   <url>
-    <loc>http://mqlgthbsakuradream.github.io/</loc>
-    <lastmod>2024-04-24</lastmod>
+    <loc>http://ymqlgthbsakuradream.github.io/</loc>
+    <lastmod>2024-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/tags/shabi/</loc>
+    <lastmod>2024-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/tags/shabi114514/</loc>
+    <lastmod>2024-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/categories/erbi/</loc>
+    <lastmod>2024-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
