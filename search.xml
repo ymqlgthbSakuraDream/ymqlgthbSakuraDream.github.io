@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>text</title>
-    <url>/text.html</url>
+    <title>置顶公告</title>
+    <url>/notice.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>erbi</category>
+        <category>档案</category>
       </categories>
-      <tags>
-        <tag>shabi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>text1</title>
-    <url>/text1.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>erbi</category>
-      </categories>
-      <tags>
-        <tag>shabi114514</tag>
-      </tags>
   </entry>
 </search>

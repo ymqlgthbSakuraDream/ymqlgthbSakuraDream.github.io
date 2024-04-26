@@ -1797,22 +1797,10 @@ pre code {
   font-size: 1.125em;
   position: relative;
 }
-.posts-collapse .post-content .collection-title::before {
-  background: #999;
-  border: 1px solid #fff;
-  margin-left: -6px;
-  margin-top: -4px;
-  position: absolute;
-  top: 50%;
-  border-radius: 50%;
-  content: ' ';
-  height: 10px;
-  width: 10px;
-}
 .posts-collapse .post-content .collection-year {
   font-size: 1.5em;
   font-weight: bold;
-  margin: 60px 0;
+  margin: 0px 0;
   position: relative;
 }
 .posts-collapse .post-content .collection-year .collection-year-count {
@@ -1826,17 +1814,6 @@ pre code {
   padding: 2px 5px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.posts-collapse .post-content .collection-year::before {
-  background: #bbb;
-  margin-left: -4px;
-  margin-top: -4px;
-  position: absolute;
-  top: 50%;
-  border-radius: 50%;
-  content: ' ';
-  height: 8px;
-  width: 8px;
-}
 .posts-collapse .post-content .collection-header {
   display: block;
   margin-left: 20px;
@@ -1846,26 +1823,12 @@ pre code {
   margin-left: 5px;
 }
 .posts-collapse .post-content .post-header {
-  border-bottom: 1px dashed #ccc;
-  margin: 30px 2px 0;
   padding-left: 15px;
   position: relative;
-  transition: border 0.2s ease-in-out;
-}
-.posts-collapse .post-content .post-header::before {
-  background: #bbb;
-  border: 1px solid #fff;
-  left: -6px;
-  position: absolute;
-  top: 0.75em;
-  transition: background 0.2s ease-in-out;
-  border-radius: 50%;
-  content: ' ';
-  height: 6px;
-  width: 6px;
+  height: 16px;
 }
 .posts-collapse .post-content .post-header:hover {
-  border-bottom-color: #666;
+  color: #00f;
 }
 .posts-collapse .post-content .post-header:hover::before {
   background: #222;
@@ -2042,7 +2005,6 @@ pre code {
 }
 .posts-expand .post-header {
   font-size: 1.125em;
-  margin-bottom: 60px;
   text-align: center;
 }
 .posts-expand .post-title {
