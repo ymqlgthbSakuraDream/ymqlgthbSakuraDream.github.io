@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ymqlgthbsakuradream.github.io/about/index.html</loc>
+    
+    <lastmod>2024-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/links/index.html</loc>
+    
+    <lastmod>2024-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ymqlgthbsakuradream.github.io/notice.html</loc>
     
-    <lastmod>2024-04-26</lastmod>
+    <lastmod>2024-04-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,24 +48,6 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/links/links1.html</loc>
-    
-    <lastmod>2024-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/links/index.html</loc>
-    
-    <lastmod>2024-04-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/about/index.html</loc>
     
     <lastmod>2024-04-26</lastmod>
     
