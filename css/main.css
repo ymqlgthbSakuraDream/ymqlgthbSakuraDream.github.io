@@ -314,9 +314,6 @@ table {
   margin: 0 0 20px;
   width: 100%;
 }
-tbody tr:nth-of-type(odd) {
-  background: var(--table-row-odd-bg-color);
-}
 tbody tr:hover {
   background: var(--table-row-hover-bg-color);
 }
@@ -1861,10 +1858,11 @@ pre code {
 .post-body {
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
+  line-height: 1.3;
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.125em;
+    font-size: 1;
   }
 }
 @media (min-width: 992px) {
@@ -1876,6 +1874,14 @@ pre code {
   .post-body {
     text-align: justify;
   }
+}
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  line-height: 0.1;
 }
 .post-body h1 .header-anchor,
 .post-body h2 .header-anchor,
@@ -1976,6 +1982,9 @@ pre code {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.post-body .table-container {
+  line-height: 15px;
 }
 .post-gallery {
   display: flex;
