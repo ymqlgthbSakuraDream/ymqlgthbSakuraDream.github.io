@@ -1881,7 +1881,7 @@ pre code {
 .post-body h4,
 .post-body h5,
 .post-body h6 {
-  line-height: 0.1;
+  line-height: 1em;
 }
 .post-body h1 .header-anchor,
 .post-body h2 .header-anchor,
