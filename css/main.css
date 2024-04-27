@@ -1773,9 +1773,6 @@ pre code {
 .use-motion .post-header {
   visibility: hidden;
 }
-.use-motion .post-body {
-  visibility: hidden;
-}
 .use-motion .collection-header {
   visibility: hidden;
 }
