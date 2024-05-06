@@ -1,0 +1,176 @@
+<HTML>
+	<HEAD>
+		<title>随机抽取3.0 03班</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" deviser = "sunwu_fz"/>
+		<style type="text/css">
+			body{background:#E5E5E5;text-align:center;}#test{font-size:40px;color:#ffffff;letter-spacing :10px}
+			.cntl{text-align:center;font-size:40;color:#ffff00;height:75px;}
+		</style>
+		<script type="text/JavaScript">
+			//1:语音；0:无语音
+			var vicFlag = 0;
+			//随机个数	
+			var num = 20;
+			//名单翻滚速度(毫秒)	
+			var slp = 60;
+			// 0.1~1,语速慢~快
+			var vicSpd = 0.9;
+		</script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	</HEAD>
+<BODY style="background-color:transparent">
+<div onclick="setFlag()" class = "cntl">随机/抽取</div>
+<div onclick="takeScreenshot()" class = "cntl">截图</div>
+<label id="test" /><div id="clsList" hidden>
+张轩铭
+程诗淇
+王思远
+孔一诺
+马圣杰
+孟祖瑶
+于铠萌
+王子墉
+李奕冰
+孔浩轩
+蒋善珩
+徐嘉乐
+杨舒婷
+王诗然
+郑雅心
+魏思璇
+李宏睿
+李文博
+宋子面
+山城
+陈悦洋
+刘世一
+刘辰月
+单奕霖
+张瀚元
+崔若萱
+马丹妮
+于诗琪
+付文博
+罗钰翔
+陈肖念
+苏乔爱冰
+赵宇奥
+张栩赫
+陈金诺
+刘诺伊
+张函铭
+张艺馨
+翟雨果
+王嘉润
+陈俊熙
+侯润泽
+阮敬泽
+
+</div></BODY><script type="text/JavaScript">
+			var cls = document.getElementById("clsList").innerText;
+			var rand1 = 0;
+			var flag = 1;
+			var randnum;
+			var clsArr = cls.split(/[\s\n]/).filter(item => item != '');;
+			var sum = clsArr.length;
+			
+			var id;
+			var newarr=[];
+			var str = "";
+			var list;
+			
+		
+			//数列 拼接
+			function rlstu(){
+				list = getRands();		
+				for(var i=0;i<list.length;i++){
+						str += clsArr[list[i]] + ",";
+						if((i+1)%4 == 0){str += "\n";}
+				}
+				document.getElementById("test").innerText = str;
+				str = "";
+			}			
+
+			//随机获取多人ID
+			function getRands(){
+				newarr = [];
+				for(var i=0;newarr.length<num;i++){
+					randnum = Math.random();
+					id = Math.round((sum - 1) * randnum);
+					if(newarr.indexOf(id) == -1){
+						newarr.push(id);
+					}
+					
+				}
+				return newarr;
+			}
+			
+			
+			
+			function setFlag(){
+				if(flag == 0){flag = 1;if(vicFlag == 1)doTTS();}
+				else if(flag == 1){
+					flag = 0;
+					auto();
+				}
+			}			
+			function auto(){
+				if(flag == 0){
+					rlstu();
+					setTimeout(auto,slp);
+				}
+			}
+			
+			document.onkeydown = keyDown;
+			//在Document对象中注册keyDown事件处理函数
+			function keyDown(event){
+				var event = event || window.event;  // 标准化事件对象
+				switch(event.keyCode){  // 获取当前按下键盘键的编码
+					case 38 :setFlag();break;case 40 :setFlag();break;case 34 :setFlag();break;case 33 :setFlag();break;
+				}
+				return false
+			}
+			
+			//语音函数
+			function doTTS() {
+				var u = new SpeechSynthesisUtterance();
+				u.text= fixVic(document.getElementById("test").innerText);
+				u.lang='zh';
+				u.rate=vicSpd;
+				speechSynthesis.speak(u);
+			}
+			
+			function fixVic(vic){
+				var xing = vic.substring(0,1);
+				if(xing == '种')vic = vic.replace("种","崇");
+				if(xing == '翟')vic = vic.replace("翟","宅");
+				if(xing == '单')vic = vic.replace("单","善");
+				if(xing == '仇')vic = vic.replace("仇","裘");
+				return vic;
+			}
+			//网页截屏并下载
+			function takeScreenshot() {
+			  // 获取整个页面的 DOM 元素
+			  var body = document.body;
+			  var dt = new Date();
+			  // 使用 html2canvas 进行截屏
+			  html2canvas(body).then(function(canvas) {
+				// 创建一个图片元素
+				var screenshot = document.createElement('img');
+				screenshot.src = canvas.toDataURL('image/png');
+
+				// 创建一个下载链接
+				var downloadLink = document.createElement('a');
+				downloadLink.href = screenshot.src;
+				
+				var year = dt.getFullYear(); var month = dt.getMonth() + 1; var day = dt.getDate();var hours = dt.getHours(); var minutes = dt.getMinutes(); var seconds = dt.getSeconds(); //下载的文件名
+				
+				downloadLink.download = year +""+ month + day + hours + minutes + seconds + 'screenshot.png';
+
+				// 模拟点击下载链接
+				downloadLink.click();
+			  });
+			}
+		
+</script>
+</HTML>
