@@ -2,7 +2,15 @@
 <search>
   <entry>
     <title>置顶公告</title>
-    <url>/notice.html</url>
+    <url>/homepage.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>档案</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/%E6%B5%8B%E8%AF%95.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>档案</category>
