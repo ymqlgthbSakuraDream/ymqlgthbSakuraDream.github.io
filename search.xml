@@ -32,4 +32,37 @@
         <category>档案</category>
       </categories>
   </entry>
+  <entry>
+    <title>Minecraft 基础知识讲义</title>
+    <url>/minecraft/mc_basic_tutorial.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Minecraft 原版优化Mod汇总</title>
+    <url>/minecraft/mc_mods.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Minecraft 1.20.4 原版整合包 Ver1.2发布</title>
+    <url>/minecraft/mc_1.20.4pack.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
 </search>
