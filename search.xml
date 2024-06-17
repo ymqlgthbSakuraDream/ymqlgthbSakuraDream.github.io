@@ -2,15 +2,7 @@
 <search>
   <entry>
     <title>置顶公告</title>
-    <url>/homepage.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>测试111111111111111111111111111111111111111111111111111111111111111111111111111111</title>
-    <url>/test01.html</url>
+    <url>/posts/homepage.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>档案</category>
@@ -18,15 +10,7 @@
   </entry>
   <entry>
     <title>✦ 应 急 食 品 ✦ 2023_2024 群成员素质拓展 (一审)</title>
-    <url>/emergencyfoodexam/exam01.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>测试222222222222222222222222222222222222222222222222222222222222</title>
-    <url>/test02.html</url>
+    <url>/posts/emergencyfoodexam/exam01.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>档案</category>
@@ -34,18 +18,7 @@
   </entry>
   <entry>
     <title>Minecraft 基础知识讲义</title>
-    <url>/minecraft/mc_basic_tutorial.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Minecraft 原版优化Mod汇总</title>
-    <url>/minecraft/mc_mods.html</url>
+    <url>/posts/minecraft/mc_basic_tutorial.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -56,7 +29,7 @@
   </entry>
   <entry>
     <title>Minecraft 1.20.4 原版整合包 Ver1.2发布</title>
-    <url>/minecraft/mc_1.20.4pack.html</url>
+    <url>/posts/minecraft/mc_1.20.4pack.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -64,5 +37,24 @@
       <tags>
         <tag>Minecraft</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Minecraft 原版优化Mod汇总</title>
+    <url>/posts/minecraft/mc_mods.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>置顶公告(截止至20240617)</title>
+    <url>/posts/oldhomepages/homepage20240617.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>档案</category>
+      </categories>
   </entry>
 </search>
