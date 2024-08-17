@@ -2,9 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/index.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/szmwiki.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/jiegewiki.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/tools/swnamechooser.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/tools/index.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/tools/colors1.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/tools/colors2.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/tools/markdown.html</loc>
+    
+    <lastmod>2024-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/ayakawiki.html</loc>
     
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,15 +93,6 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/selfwiki.html</loc>
-    
-    <lastmod>2024-07-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/index.html</loc>
     
     <lastmod>2024-07-13</lastmod>
     
@@ -101,15 +164,6 @@
   </url>
   
   <url>
-    <loc>http://ymqlgthbsakuradream.github.io/tools/index.html</loc>
-    
-    <lastmod>2024-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_1.20.4pack.html</loc>
     
     <lastmod>2024-06-17</lastmod>
@@ -122,15 +176,6 @@
     <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html</loc>
     
     <lastmod>2024-06-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/tools/markdown.html</loc>
-    
-    <lastmod>2024-04-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -211,7 +256,7 @@
 
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/</loc>
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -219,7 +264,7 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/tags/Minecraft/</loc>
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -228,14 +273,21 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/%E6%A1%A3%E6%A1%88/</loc>
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/Minecraft/</loc>
-    <lastmod>2024-07-24</lastmod>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/categories/%E5%B7%A5%E5%85%B7%E9%A1%B5%E9%9D%A2/</loc>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
