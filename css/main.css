@@ -2625,7 +2625,7 @@ header.header {
   }
 }
 .site-brand-container {
-  background: var(--theme-color);
+  background: #000;
 }
 @media (max-width: 991px) {
   .site-nav-on .site-brand-container {
