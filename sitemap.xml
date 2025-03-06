@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ymqlgthbsakuradream.github.io/about/index.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/oldhomepages/homepage20240617.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/homepage.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/index.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/emergencyfoodexam/exam01.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/issue/index.html</loc>
+    
+    <lastmod>2025-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/posts/document/test.html</loc>
+    
+    <lastmod>2025-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ymqlgthbsakuradream.github.io/unknown.html</loc>
     
     <lastmod>2025-01-26</lastmod>
@@ -83,15 +146,6 @@
   </url>
   
   <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/index.html</loc>
-    
-    <lastmod>2025-01-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/wanggewiki.html</loc>
     
     <lastmod>2025-01-05</lastmod>
@@ -110,25 +164,7 @@
   </url>
   
   <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/emergencyfoodexam/exam01.html</loc>
-    
-    <lastmod>2025-01-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/todolist.html</loc>
-    
-    <lastmod>2024-12-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/homepage.html</loc>
     
     <lastmod>2024-12-27</lastmod>
     
@@ -182,15 +218,6 @@
   </url>
   
   <url>
-    <loc>http://ymqlgthbsakuradream.github.io/issue/index.html</loc>
-    
-    <lastmod>2024-08-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/wiki/jiegewiki.html</loc>
     
     <lastmod>2024-08-17</lastmod>
@@ -230,51 +257,6 @@
     <loc>http://ymqlgthbsakuradream.github.io/posts/tools/markdown.html</loc>
     
     <lastmod>2024-08-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_basic_tutorial.html</loc>
-    
-    <lastmod>2024-06-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/oldhomepages/homepage20240617.html</loc>
-    
-    <lastmod>2024-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_1.20.4pack.html</loc>
-    
-    <lastmod>2024-06-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html</loc>
-    
-    <lastmod>2024-06-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/about/index.html</loc>
-    
-    <lastmod>2024-04-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -328,7 +310,7 @@
 
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -336,7 +318,14 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/tags/Minecraft/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/tags/%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -345,28 +334,35 @@
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/%E6%A1%A3%E6%A1%88/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/%E6%95%99%E7%A8%8B%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/Minecraft/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://ymqlgthbsakuradream.github.io/categories/%E5%B7%A5%E5%85%B7%E9%A1%B5%E9%9D%A2/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/categories/%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2025-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
