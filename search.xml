@@ -17,6 +17,14 @@
       </categories>
   </entry>
   <entry>
+    <title>关于b站早期鬼畜视频</title>
+    <url>/posts/blog/20250119.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>教程记录</category>
+      </categories>
+  </entry>
+  <entry>
     <title>如何批量下载b站收藏夹内的视频</title>
     <url>/posts/blog/20241223.html</url>
     <content><![CDATA[]]></content>
@@ -25,12 +33,15 @@
       </categories>
   </entry>
   <entry>
-    <title>关于b站早期鬼畜视频</title>
-    <url>/posts/blog/20250119.html</url>
+    <title>测试</title>
+    <url>/posts/document/test.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>教程记录</category>
+        <category>文档</category>
       </categories>
+      <tags>
+        <tag>文档</tag>
+      </tags>
   </entry>
   <entry>
     <title>✦ 应 急 食 品 ✦ 2023_2024 群成员素质拓展 (一审)</title>
@@ -109,80 +120,5 @@
       <categories>
         <category>工具页面</category>
       </categories>
-  </entry>
-  <entry>
-    <title>凌华哥梗百科</title>
-    <url>/posts/wiki/ayakawiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>狗哥梗百科</title>
-    <url>/posts/wiki/dogwiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>付栢岩 Ciallo～(∠・ω&lt; )⌒★</title>
-    <url>/posts/wiki/fby.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>百科索引页（旧物归档）</title>
-    <url>/posts/wiki/index.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>捷哥百科</title>
-    <url>/posts/wiki/jiegewiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>个人梗百科</title>
-    <url>/posts/wiki/selfwiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SZM百科</title>
-    <url>/posts/wiki/szmwiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>王哥梗百科</title>
-    <url>/posts/wiki/wanggewiki.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/posts/document/test.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-      <tags>
-        <tag>文档</tag>
-      </tags>
   </entry>
 </search>
