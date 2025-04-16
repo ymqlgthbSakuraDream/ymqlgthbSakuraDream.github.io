@@ -33,17 +33,6 @@
       </categories>
   </entry>
   <entry>
-    <title>测试</title>
-    <url>/posts/document/test.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-      <tags>
-        <tag>文档</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>✦ 应 急 食 品 ✦ 2023_2024 群成员素质拓展 (一审)</title>
     <url>/posts/emergencyfoodexam/exam01.html</url>
     <content><![CDATA[]]></content>
@@ -120,5 +109,16 @@
       <categories>
         <category>工具页面</category>
       </categories>
+  </entry>
+  <entry>
+    <title>烟花来咯！</title>
+    <url>/posts/minecraft/Archive.20250416.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
   </entry>
 </search>
