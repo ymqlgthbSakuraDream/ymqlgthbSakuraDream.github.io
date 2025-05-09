@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ymqlgthbsakuradream.github.io/src/genshin.json</loc>
+    
+    <lastmod>2025-05-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ymqlgthbsakuradream.github.io/folders/issue/index.html</loc>
+    
+    <lastmod>2025-05-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250416.html</loc>
     
     <lastmod>2025-05-09</lastmod>
@@ -41,15 +59,6 @@
     <loc>http://ymqlgthbsakuradream.github.io/unknown.html</loc>
     
     <lastmod>2025-04-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ymqlgthbsakuradream.github.io/folders/issue/index.html</loc>
-    
-    <lastmod>2025-04-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
