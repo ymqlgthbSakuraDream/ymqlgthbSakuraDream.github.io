@@ -84,7 +84,7 @@
 <meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/1.gif">
 <meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/2.gif">
 <meta property="article:published_time" content="2025-08-07T16:38:16.000Z">
-<meta property="article:modified_time" content="2025-08-08T17:17:23.716Z">
+<meta property="article:modified_time" content="2025-08-09T05:29:59.338Z">
 <meta property="article:tag" content="Minecraft">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/2025-08-08T00_30_06.jpg">
@@ -317,7 +317,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-09 01:17:23" itemprop="dateModified" datetime="2025-08-09T01:17:23+08:00">2025-08-09</time>
+      <time title="修改时间：2025-08-09 13:29:59" itemprop="dateModified" datetime="2025-08-09T13:29:59+08:00">2025-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -419,9 +419,9 @@ target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nx4y1279F
 Workspace</strong>中，每一个可交互模型都由一个Marker，一个或多个展示实体与交互实体组成，其中交互实体用于接收玩家的操作，然后Marker将作为执行者执行事先设定好的事件，最终展示实体给予一定反馈</p>
 <p>交互实体接收到玩家的操作以后，需要告诉Marker让其作为执行者，但是如何让交互实体找到Marker呢，一种方法是让交互实体作为Marker的乘客，交互实体可以使用<strong>execute
 on
-passagers</strong>找到Marker，但是这样做很显然有一个问题：假如有不止一个展示实体，让它们都作为Marker的乘客，那么这些展示实体就无法分别设定自己的坐标。显然这是不合适的</p>
+vehicle</strong>找到Marker，但是这样做很显然有一个问题：假如有不止一个展示实体，让它们都作为Marker的乘客，那么这些展示实体就无法分别设定自己的坐标。显然这是不合适的</p>
 <p>另外一种方法是，在模型被创建的之时，将展示实体和Marker的UUID存入storage中，展示实体只需要查找表即可找到Marker</p>
-<p>现在Marker成为了执行者，它可以操作所有的交互实体，这又该如何实现呢？其实也不难，我们将一个模型中所有的展示实体与交互实体成为该模型的元素(element)，为每一个元素设定一个不重复的元素ID，然后在Marker中存储所有元素的元素ID和UUID，Marker可以通过给定元素ID来查找该元的UUID，从而对该元素执行操作</p>
+<p>现在Marker成为了执行者，它可以操作所有的交互实体，这又该如何实现呢？其实也不难，我们将一个模型中所有的展示实体与交互实体称为该模型的元素(element)，为每一个元素设定一个不重复的元素ID，然后在Marker中存储所有元素的元素ID和UUID，Marker可以通过给定元素ID来查找该元素的UUID，从而对该元素执行操作</p>
 <pre class="mermaid">sequenceDiagram
   玩家->>交互实体: 玩家点击交互实体
   交互实体->>Marker: 查找表，找到Marker的UUID
@@ -510,7 +510,7 @@ href="#event">事件列表</a></li>
 <h3 id="事件列表">事件列表</h3>
 <p>事件列表的执行者为该模型的Marker<br />
 可以使用<strong><span class="citation" data-cites="a">@a
-[tag=skmws.s]</span></strong>执行交互操作的玩家</p>
+[tag=skmws.s]</span></strong>来指定正在执行交互操作的玩家</p>
 <div class="nbttree">
 <ul>
 <li><img src="src/list.svg"/>(一个事件列表)
@@ -518,9 +518,9 @@ href="#event">事件列表</a></li>
 <li><img src="src/structure.svg"/>(一个事件)
 <ul>
 <li><img src="src/string.svg"/><strong>type</strong> 事件类型 <br><br>
-当<strong>type:"remove"</strong>时，移除该模型，同时触发on_remove事件（无需提供额外参数）
+当<strong>type:"remove"</strong>时，移除该模型，同时触发on_remove事件列表（无需提供额外参数）
 <br><br>
-当<strong>type:"destroy"</strong>时，破坏该模型，同时触发on_remove事件</li>
+当<strong>type:"destroy"</strong>时，破坏该模型，同时触发on_remove事件列表</li>
 <li><img src="src/string.svg"/><strong>sound</strong> 破坏音效</li>
 <li><img src="src/string.svg"/><strong>particle</strong> 破坏粒子
 <br><br>
@@ -556,7 +556,8 @@ href="#event">事件列表</a></li>
 </ul></li>
 </ul>
 </div>
-<p><br><br> 此外这些事件还有其对应的函数,{大括号里是函数的参数呢}</p>
+<p><br><br> 此外这些事件还有其对应的函数,{大括号里是函数的参数呢}<br />
+可以在<strong>type:"cmd"</strong>事件执行的命令中使用这些函数，不能在其他的上下文中使用</p>
 <p><strong>skmws:event/remove</strong><br />
 <strong>skmws:event/destroy {sound, particle}</strong><br />
 <strong>skmws:event/cooldown {time}</strong><br />
