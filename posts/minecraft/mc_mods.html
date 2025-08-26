@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ymqlgthbsakuradream.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"disqus":{"text":"Load Disqus","order":-1},"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+    <meta name="description" content="本内容持续更新！ 优化模组 C2ME引擎 c2me Reese的钠视频界面 reeses sodium options 实体渲染机制优化 entityculling 火花 spark 铁氧体磁芯 ferritecore 星光 starlight 氪 krypton 钠 sodium 铟 indium ImmediatelyFast ImmediatelyFast Iris光">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minecraft 原版优化Mod汇总">
+<meta property="og:url" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html">
+<meta property="og:site_name" content="✦ 应 急 食 品 ✦">
+<meta property="og:description" content="本内容持续更新！ 优化模组 C2ME引擎 c2me Reese的钠视频界面 reeses sodium options 实体渲染机制优化 entityculling 火花 spark 铁氧体磁芯 ferritecore 星光 starlight 氪 krypton 钠 sodium 铟 indium ImmediatelyFast ImmediatelyFast Iris光">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-14T15:56:00.000Z">
+<meta property="article:modified_time" content="2025-03-06T15:50:02.358Z">
+<meta property="article:tag" content="Minecraft">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html","path":"posts/minecraft/mc_mods.html","title":"Minecraft 原版优化Mod汇总"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Minecraft 原版优化Mod汇总 | ✦ 应 急 食 品 ✦</title><meta name="robots" content="noindex">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion" style="background-color:rgba(0,0,0,0);">
+<div class="skbg FadeIn" style="z-index:-10;position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: 0;padding: 0;background-image: url(/src/background_images/sky02.png);background-repeat: no-repeat;background-attachment: fixed;background-size: cover;"></div>
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-color:rgba(0,0,0,0.75);"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+  
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">✦ 应 急 食 品 ✦</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Paimon - Emergency Food</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-saying"><a href="/folders/saying/" rel="section"><i class="fa-solid fa-star fa-fw"></i>说说</a></li><li class="menu-item menu-item-schedule"><a href="/folders/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-drive"><a href="https://njfnglql.ap-northeast-1.clawcloudrun.com/" rel="section" target="_blank"><i class="fa-solid fa-hard-drive fa-fw"></i>云盘</a></li><li class="menu-item menu-item-resource"><a href="/folders/resource/" rel="section"><i class="fa-solid fa-file fa-fw"></i>资源汇总</a></li><li class="menu-item menu-item-links"><a href="/folders/links/" rel="section"><i class="fa-solid fa-link fa-fw"></i>链接汇总</a></li><li class="menu-item menu-item-issue"><a href="/folders/issue/" rel="section"><i class="fa-regular fa-comments fa-fw"></i>留言板</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa-solid fa-wrench fa-fw"></i>工具</a></li><li class="menu-item menu-item-wiki"><a href="/folders/wiki/" rel="section"><i class="fa-solid fa-book fa-fw"></i>百科</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active" style="background-color:rgba(0,0,0,0.75);">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E6%A8%A1%E7%BB%84"><span class="nav-text">优化模组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E5%8A%9F%E8%83%BD"><span class="nav-text">辅助功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#masa%E5%8F%8A%E6%8B%93%E5%B1%95"><span class="nav-text">Masa及拓展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xaero%E5%9C%B0%E5%9B%BE"><span class="nav-text">Xaero地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E5%8A%9F%E8%83%BD"><span class="nav-text">高级功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E5%93%81%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-text">物品管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E7%B1%BB"><span class="nav-text">编辑类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%90%E8%B4%A8%E7%9B%B8%E5%85%B3"><span class="nav-text">材质相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9F%B3%E6%95%88%E7%9B%B8%E5%85%B3"><span class="nav-text">音效相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E6%A0%8F%E5%92%8C%E7%AE%B1%E5%AD%90"><span class="nav-text">快捷栏和箱子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%8A%E5%A4%A9%E6%A0%8F"><span class="nav-text">聊天栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%8A%9F%E8%83%BD"><span class="nav-text">新功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%89%88%E8%B0%83%E6%95%B4"><span class="nav-text">原版调整</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt=""
+      src="/images/paimon.png">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+        
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+        
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ymqlgthbSakuraDream" title="  → https:&#x2F;&#x2F;github.com&#x2F;ymqlgthbSakuraDream" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:3075961755@qq.com" title="  → mailto:3075961755@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1546917549" title="  → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1546917549" rel="noopener me" target="_blank"><i class="fa-brands fa-bilibili fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://example.com/" title="https:&#x2F;&#x2F;example.com" rel="noopener" target="_blank">Title</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+    
+
+    <div class="main-inner post posts-expand" style="background-color:rgba(0,0,0,0.75);">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://ymqlgthbsakuradream.github.io/posts/minecraft/mc_mods.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/paimon.png">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="✦ 应 急 食 品 ✦">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Minecraft 原版优化Mod汇总 | ✦ 应 急 食 品 ✦">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Minecraft 原版优化Mod汇总
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-14 23:56:00" itemprop="dateCreated datePublished" datetime="2024-06-14T23:56:00+08:00">2024-06-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-06 23:50:02" itemprop="dateModified" datetime="2025-03-06T23:50:02+08:00">2025-03-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Minecraft/" itemprop="url" rel="index"><span itemprop="name">Minecraft</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>848</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本内容持续更新！</p>
+<h2 id="优化模组">优化模组</h2>
+<p>C2ME引擎 c2me</p>
+<p>Reese的钠视频界面 reeses sodium options</p>
+<p>实体渲染机制优化 entityculling</p>
+<p>火花 spark</p>
+<p>铁氧体磁芯 ferritecore</p>
+<p>星光 starlight</p>
+<p>氪 krypton</p>
+<p>钠 sodium</p>
+<p>铟 indium</p>
+<p>ImmediatelyFast ImmediatelyFast</p>
+<p>Iris光影 Iris</p>
+<h2 id="辅助功能">辅助功能</h2>
+<h3 id="masa及拓展">Masa及拓展</h3>
+<p>物品滚轮 Masa itemscoller</p>
+<p>投影 Masa litematica</p>
+<p>共享投影 syncmatica</p>
+<p>投影打印机 litematica printer</p>
+<p>迷你HUD Masa minihud</p>
+<p>物品栏HUD+ invhud</p>
+<p>多功能辅助 Masa tweakroo</p>
+<p>客户端微调 tweakermore</p>
+<p>客户端增强 Masa ohmyminecraftclient</p>
+<p>Masa特性微调 Masa Gadget</p>
+<p>地毯 Masa carpet</p>
+<p>地毯拓展 carpet extra</p>
+<p>地毯TIS拓展 carpet TIS addition</p>
+<p>地毯TCTC拓展 carpet TCTC addition</p>
+<p>地毯gugle附加包 gugle carpet addition</p>
+<h3 id="xaero地图">Xaero地图</h3>
+<p>Xaero小地图 Xaero minimap</p>
+<p>世界地图 Xaero worldmap</p>
+<p>Xaero缩放增强 Xaero zoomout</p>
+<p>Xaero地图拓展 Xaero map addition</p>
+<h3 id="高级功能">高级功能</h3>
+<p>崩溃追踪 mixintrace</p>
+<p>伽马值工具 Gamma Utils</p>
+<p>高级联机设置 mcwifipnp</p>
+<p>客户端命令 clientcommands</p>
+<p>活塞更新顺序显示 pistorder</p>
+<p>全局数据包 global packs</p>
+<p>禁用世界警告 DisableCustomWorldsAdvice</p>
+<p>自动汉化更新 I18nUpdateMod</p>
+<p>禁用聊天举报 NoChatReports</p>
+<h3 id="物品管理器">物品管理器</h3>
+<p>REI物品管理 RoughlyEnoughItems</p>
+<p>EMI物品管理 emi</p>
+<h3 id="编辑类">编辑类</h3>
+<p>Axiom编辑器 Axiom</p>
+<p>NBT编辑器 nbteditor</p>
+<p>创世神 worldedit</p>
+<p>创世神CUI拓展 worldedit CUI</p>
+<p>创世神曲线工具 curvebuilding</p>
+<p>世界管理器 World Handler</p>
+<p>牌子编辑 Sign Edit Lite</p>
+<p>编辑盔甲架 Armor Statues</p>
+<p>蜂巢信息 beenfo</p>
+<p>音符盒调试 blocktuner</p>
+<h3 id="材质相关">材质相关</h3>
+<p>CIT材质 CITResewn</p>
+<p>实体材质特性 entity texture features</p>
+<p>实体模型特性 entity model features</p>
+<p>连接材质 continuity</p>
+<p>模型贴图缝隙修复 modelfix</p>
+<p>飘扬披风 waveycapes</p>
+<p>隐藏盔甲 armor_visibility</p>
+<p>进食动画 eating animation</p>
+<p>3D皮肤层 3dskinlayers</p>
+<p>额外玩家渲染 ExtraPlayerRenderer</p>
+<p>动态光源 lambdynamicligh</p>
+<h3 id="音效相关">音效相关</h3>
+<p>滴水声 DripSounds</p>
+<p>自然音效 AmbientSounds</p>
+<p>足音 PresenceFootsteps</p>
+<p>混响 DynamicSoundFilters</p>
+<h3 id="快捷栏和箱子">快捷栏和箱子</h3>
+<p>箱子搜索栏 Searchables</p>
+<p>一键整理Next InventoryProfilesNext</p>
+<p>显示经验数量 EXP Counter</p>
+<p>武器稀有度词条 TieredZ</p>
+<p>这个格子能放什么 What's That Slot</p>
+<p>细节盔甲栏 DetailArmorBar</p>
+<p>耐久指示器 durabilityviewer</p>
+<p>双重快捷栏 double hotbar</p>
+<p>物品搜索 whereisit</p>
+<p>快速工具选择 Wild Tool Access</p>
+<p>饱和度显示 appleskin</p>
+<h3 id="聊天栏">聊天栏</h3>
+<p>聊天头像 chat heads</p>
+<p>聊天图片 ChatImage</p>
+<p>聊天动画 ChatAnimation</p>
+<h3 id="新功能">新功能</h3>
+<p>语音聊天 voicechat</p>
+<p>游戏内资源包搜索 Resourcify</p>
+<p>置顶存档 cherishedworlds</p>
+<p>按键冲突转盘 Keybinds Galore</p>
+<p>模组音量选项 Mod Sound Volume Options</p>
+<p>截图查看器 Screenshot Viewer</p>
+<p>可视化按键绑定 Raw's Visual keybinder</p>
+<p>附近物品拾取 Raw's Vicinity item pickup</p>
+<p>血量显示 neat</p>
+<p>席地而坐 sit</p>
+<p>回放 replaymod</p>
+<p>模组菜单 modmenu</p>
+<p>潜影盒显示 shulkerboxtooltip</p>
+<p>自动钓鱼 Autofish</p>
+<p>WI变焦 WI Zoom</p>
+<p>等轴渲染 isometric</p>
+<p>建筑调整 lottweaks</p>
+<p>结构边框显示 BBoutline</p>
+<p>连锁采集 diggusmaximus</p>
+<p>落叶 fallingleaves</p>
+<p>自动第三人称 Auto Third Person</p>
+<p>村民委托 VillagerQuests</p>
+<p>展示玩家打开的UI What Are They Up To</p>
+<p>掉落物物理 ItemPhysic</p>
+<h3 id="原版调整">原版调整</h3>
+<p>更快的梯子 better climbing</p>
+<p>物理锁链 connectiblechains</p>
+<p>可莉半砖 kleeslabs</p>
+<p>越过栅栏 jumpoverfences</p>
+<p>自动攻击 Auto Attack</p>
+<p>有用的望远镜 Useful Spyglass</p>
+<p>潜行连接 Sneaky Link</p>
+<p>捡起火把 PickUpTorches</p>
+<p>Buff马 Horse Buff</p>
+<p>持续瞄准 Consistent Aim</p>
+<p>门下小径 Path Under Gates</p>
+<p>右键收割 harvestwithease</p>
+<p>点过去告示牌 ClickThrough</p>
+<p>越过1格高 Step It Up</p>
+<p>交易简化 trade cycling</p>
+<p>简易铁砧 EasyAnvils</p>
+<p>简易附魔台 EasyMagic</p>
+<p>边走边拿 InvMove</p>
+<p>进度牌匾 AdvancementPlaques</p>
+<p>加载界面提示 Tips</p>
+<p>滚筒飞行 do a barrel roll</p>
+<p>更好的视角摇晃 CameraOverhaul</p>
+<p>更好的第三人称 BetterThirdPerson</p>
+<p>鞘翅物理 ElytraPhysics</p>
+<p>更好的F3 BetterF3</p>
+<!-- flag of hidden posts -->
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Minecraft/" rel="tag"><i class="fa fa-tag"></i> Minecraft</a>
+          </div>
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer" style="background-color:rgba(0,0,0,1);">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">抽卡就免了吧，保底全歪的样子太可笑了！</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+<span id="timeDate">载入天数...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("4/23/2024 22:00:00"); //修改为你的网站开始运行的时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "SK在此已祈祷 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+<span id="moeicp"><a href="https://icp.gov.moe/?keyword=20252147" target="_blank">萌ICP备20252147号</a></span>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.min.js","integrity":"sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ymqlgthbSakuraDream","repo":"paimontalk","client_id":"Ov23lipENLXHls9CpUMY","client_secret":"61eac6d23504a2c901bbd67bd50c70a27138e793","admin_user":"ymqlgthbSakuraDream","distraction_free_mode":true,"proxy":"https://proxy-gitalk-api.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3f9762b9e4dab6a450c7b6fc19e6e93d"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+
+</body>
+</html>

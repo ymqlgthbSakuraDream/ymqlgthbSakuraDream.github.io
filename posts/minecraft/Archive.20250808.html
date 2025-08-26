@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ymqlgthbsakuradream.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","width":180,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"disqus":{"text":"Load Disqus","order":-1},"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeIn","post_block":"fadeIn","post_header":"fadeIn","coll_header":"fadeIn","sidebar":"fadeIn"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+    <meta name="description" content=".nbttree li::marker {   content: &quot;└&quot;;   font-size: 20px; } .nbttree ul{   padding: 0px 0px 0px 25px } .nbttree img {     float: left;      margin: 0px;     width: 18px; }   本项目名为SK Mod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="像写诗一样制作可交互模型">
+<meta property="og:url" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808.html">
+<meta property="og:site_name" content="✦ 应 急 食 品 ✦">
+<meta property="og:description" content=".nbttree li::marker {   content: &quot;└&quot;;   font-size: 20px; } .nbttree ul{   padding: 0px 0px 0px 25px } .nbttree img {     float: left;      margin: 0px;     width: 18px; }   本项目名为SK Mod">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/2025-08-08T00_30_06.jpg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/float.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/float.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/int.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/list.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/structure.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/src/string.svg">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/1.gif">
+<meta property="og:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/2.gif">
+<meta property="article:published_time" content="2025-08-07T16:38:16.000Z">
+<meta property="article:modified_time" content="2025-08-09T05:29:59.338Z">
+<meta property="article:tag" content="Minecraft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808/2025-08-08T00_30_06.jpg">
+
+
+<link rel="canonical" href="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":"","permalink":"http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808.html","path":"posts/minecraft/Archive.20250808.html","title":"像写诗一样制作可交互模型"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>像写诗一样制作可交互模型 | ✦ 应 急 食 品 ✦</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion" style="background-color:rgba(0,0,0,0);">
+<div class="skbg FadeIn" style="z-index:-10;position: fixed;top: 0;bottom: 0;left: 0;right: 0;margin: 0;padding: 0;background-image: url(/src/background_images/sky02.png);background-repeat: no-repeat;background-attachment: fixed;background-size: cover;"></div>
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-color:rgba(0,0,0,0.75);"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+  
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">✦ 应 急 食 品 ✦</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Paimon - Emergency Food</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-saying"><a href="/folders/saying/" rel="section"><i class="fa-solid fa-star fa-fw"></i>说说</a></li><li class="menu-item menu-item-schedule"><a href="/folders/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-drive"><a href="https://njfnglql.ap-northeast-1.clawcloudrun.com/" rel="section" target="_blank"><i class="fa-solid fa-hard-drive fa-fw"></i>云盘</a></li><li class="menu-item menu-item-resource"><a href="/folders/resource/" rel="section"><i class="fa-solid fa-file fa-fw"></i>资源汇总</a></li><li class="menu-item menu-item-links"><a href="/folders/links/" rel="section"><i class="fa-solid fa-link fa-fw"></i>链接汇总</a></li><li class="menu-item menu-item-issue"><a href="/folders/issue/" rel="section"><i class="fa-regular fa-comments fa-fw"></i>留言板</a></li><li class="menu-item menu-item-tools"><a href="/tools/" rel="section"><i class="fa-solid fa-wrench fa-fw"></i>工具</a></li><li class="menu-item menu-item-wiki"><a href="/folders/wiki/" rel="section"><i class="fa-solid fa-book fa-fw"></i>百科</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active" style="background-color:rgba(0,0,0,0.75);">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8C%85%E4%B8%8B%E8%BD%BD"><span class="nav-text">数据包下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%9E%8B%E5%91%A2"><span class="nav-text">什么是“可交互模型”呢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%91%A2"><span class="nav-text">该如何实现呢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B"><span class="nav-text">定义模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="nav-text">事件列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B"><span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E7%A8%8B%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%9E%8B"><span class="nav-text">例程：装饰模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B%E7%A8%8B%E6%9B%B4%E4%B8%9D%E6%BB%91%E7%9A%84%E9%97%A8"><span class="nav-text">例程：更丝滑的门</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt=""
+      src="/images/paimon.png">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+        
+        
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+        
+        
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ymqlgthbSakuraDream" title="  → https:&#x2F;&#x2F;github.com&#x2F;ymqlgthbSakuraDream" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:3075961755@qq.com" title="  → mailto:3075961755@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1546917549" title="  → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1546917549" rel="noopener me" target="_blank"><i class="fa-brands fa-bilibili fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://example.com/" title="https:&#x2F;&#x2F;example.com" rel="noopener" target="_blank">Title</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+    
+
+    <div class="main-inner post posts-expand" style="background-color:rgba(0,0,0,0.75);">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/paimon.png">
+      <meta itemprop="name" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="✦ 应 急 食 品 ✦">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="像写诗一样制作可交互模型 | ✦ 应 急 食 品 ✦">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          像写诗一样制作可交互模型
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-08 00:38:16" itemprop="dateCreated datePublished" datetime="2025-08-08T00:38:16+08:00">2025-08-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-09 13:29:59" itemprop="dateModified" datetime="2025-08-09T13:29:59+08:00">2025-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Minecraft/" itemprop="url" rel="index"><span itemprop="name">Minecraft</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+          
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><style>
+.nbttree li::marker {
+  content: "└";
+  font-size: 20px;
+}
+.nbttree ul{
+  padding: 0px 0px 0px 25px
+}
+.nbttree img {
+    float: left; 
+    margin: 0px;
+    width: 18px;
+}
+</style>
+<p><img src="Archive.20250808/2025-08-08T00_30_06.jpg" width="1000"/></p>
+<p>本项目名为<strong>SK Model
+Workspace(模型工作空间)</strong>，旨在通过简单的方式，创建可交互，可复用的模型。同时具有丰富的接口和较强的可拓展性<br />
+<del>由于作者一直在咕咕咕，导致该项目有很多坑没有填</del>，如果你正在<strong><a
+target="_blank" rel="noopener" href="https://cr-019.github.io/datapack-index/">香草图书馆</a></strong>浏览本页面，可以<strong><a
+href="https://ymqlgthbsakuradream.github.io/posts/minecraft/Archive.20250808.html">点这里</a></strong>访问该文章的原始页面，文章将在原始页面继续保持更新，之后会添加更多有用的功能<br />
+之后我也会制作一些基于该数据包的原版家具，<del>（然而我并不会建模，所以做的不怎么好）</del></p>
+<ul>
+<li>运作方式：原版游戏,<strong><a
+target="_blank" rel="noopener" href="https://zh.minecraft.wiki/w/%E6%95%B0%E6%8D%AE%E5%8C%85">数据包</a></strong></li>
+<li>支持版本：<strong>1.21.8</strong></li>
+</ul>
+<p>本文将详细介绍该数据包的功能，并且提供一些案例教程方便读者理解</p>
+<h3 id="数据包下载">数据包下载</h3>
+<div class="nbttree">
+<p><strong>依赖关系</strong></p>
+<ul>
+<li><strong>(数据包)</strong> SK Model Workspace
+<ul>
+<li><strong>(前置数据包)</strong> SK API</li>
+</ul></li>
+</ul>
+</div>
+<p><a href="./Archive.20250729.html">前往下载页面</a></p>
+<p><br/><br/></p>
+<h3 id="什么是可交互模型呢">什么是“可交互模型”呢</h3>
+<p>玩家对模型进行一定操作，模型对操作进行反馈，具备这种特征的模型可以称作“可交互模型”，比方说有一个椅子，玩家左键点击即可将其破坏，右键点击可以坐到上面。其中“左键点击”和“右键点击”即为操作，“破坏”和“坐”即为反馈，此时，这个椅子就是一个“可交互模型”</p>
+<p>展示实体与交互实体在1.19.4版本被加入，为原版开发者们提供了诸多便利，也为找到“可交互模型”的简单实现方式带来了可能性，这一领域目前已有许多优秀的作品：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/14646.html">Deco Creater kit -
+简单交互性装饰模型支持库</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Bybycyann/NekoModelsLib">Neko Models Lib
+- 轻量级自定义模型前置支持库</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://github.com/Acappellia/NyaaWorks/blob/main/Readme.md">NyaaWorks
+- 家具系统</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1nx4y1279F">一键生成能自定义交互反馈的按钮</a></li>
+</ul>
+<h3 id="该如何实现呢">该如何实现呢</h3>
+<p>在<strong>SK Model
+Workspace</strong>中，每一个可交互模型都由一个Marker，一个或多个展示实体与交互实体组成，其中交互实体用于接收玩家的操作，然后Marker将作为执行者执行事先设定好的事件，最终展示实体给予一定反馈</p>
+<p>交互实体接收到玩家的操作以后，需要告诉Marker让其作为执行者，但是如何让交互实体找到Marker呢，一种方法是让交互实体作为Marker的乘客，交互实体可以使用<strong>execute
+on
+vehicle</strong>找到Marker，但是这样做很显然有一个问题：假如有不止一个展示实体，让它们都作为Marker的乘客，那么这些展示实体就无法分别设定自己的坐标。显然这是不合适的</p>
+<p>另外一种方法是，在模型被创建的之时，将展示实体和Marker的UUID存入storage中，展示实体只需要查找表即可找到Marker</p>
+<p>现在Marker成为了执行者，它可以操作所有的交互实体，这又该如何实现呢？其实也不难，我们将一个模型中所有的展示实体与交互实体称为该模型的元素(element)，为每一个元素设定一个不重复的元素ID，然后在Marker中存储所有元素的元素ID和UUID，Marker可以通过给定元素ID来查找该元素的UUID，从而对该元素执行操作</p>
+<pre class="mermaid">sequenceDiagram
+  玩家->>交互实体: 玩家点击交互实体
+  交互实体->>Marker: 查找表，找到Marker的UUID
+  Marker-->>展示实体1: 通过元素ID查找UUID
+  Marker-->>展示实体2: 通过元素ID查找UUID</pre>
+<p>此外，<strong>SK Model
+Workspace</strong>还支持给模型配置方块，模型本身是没有碰撞体积的。可以配置屏障方块来给模型添加碰撞体积。也可以配置光源方块，让模型发光。
+同时为了不影响世界中已经存在的方块，在模型被创建时，会检查目标位置的方块是否为空气，如果是，配置好的方块才会被放置</p>
+<h3 id="定义模型">定义模型</h3>
+<p>秉持可复用原则，需要先定义模型，再创建模型</p>
+<br/><br/> <strong>定义模型</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data modify storage skmws reg.model.&lt;模型ID&gt; set value &lt;模型数据&gt;</span><br></pre></td></tr></table></figure> 参数说明<br />
+<strong>&lt;模型ID&gt;</strong> 模型的ID，这是唯一的<br />
+<strong>&lt;模型数据&gt;</strong>
+一个包含该模型所有数据的复合标签,格式如下<br />
+
+<div class="nbttree">
+<ul>
+<li><img src="src/structure.svg"/>(根标签)
+<ul>
+<li><img src="src/list.svg"/><strong>elements</strong> 元素列表
+<ul>
+<li><img src="src/structure.svg"/>(一个元素)
+<ul>
+<li><img src="src/string.svg"/><strong>type</strong>
+实体类型，可选值为<strong>item_display</strong>，<strong>text_display</strong>，<strong>block_display</strong>，<strong>interaction</strong>
+<br><br> 当<strong>type:"interaction"</strong>时</li>
+<li><img src="src/string.svg"/><strong>id</strong>
+元素ID，元素列表中所有元素的ID不能重复</li>
+<li><img src="src/structure.svg"/><strong>events</strong> 事件列表
+<ul>
+<li><img src="src/list.svg"/><strong>leftclick</strong> (可选)一个<a
+href="#event">事件列表</a>，左键点击时执行的事件</li>
+<li><img src="src/list.svg"/><strong>rightclick</strong> (可选)一个<a
+href="#event">事件列表</a>，右键点击时执行的事件</li>
+</ul></li>
+<li><img src="src/structure.svg"/><strong>merge</strong>
+(可选)合并数据</li>
+<li><img src="src/list.svg"/><strong>position</strong> (可选)相对位置
+<br><br>
+当<strong>type:"item_display"</strong>或<strong>type:"text_display"</strong>或<strong>type:"block_display"</strong>时</li>
+<li><img src="src/string.svg"/><strong>id</strong>
+元素ID，元素列表中所有元素的ID不得重复</li>
+<li><img src="src/structure.svg"/><strong>merge</strong>
+(可选)合并数据</li>
+<li><img src="src/list.svg"/><strong>position</strong>
+(可选)相对位置</li>
+<li><img src="src/list.svg"/><strong>rotation</strong> (可选)相对旋转角
+<br/><br/></li>
+</ul></li>
+</ul></li>
+<li><img src="src/structure.svg"/><strong>marker</strong>
+(可选)标记实体配置
+<ul>
+<li><img src="src/structure.svg"/><strong>merge</strong> 合并数据</li>
+</ul></li>
+<li><img src="src/list.svg"/><strong>blocks</strong> (可选)方块列表
+<ul>
+<li><img src="src/structure.svg"/>(一个方块)
+<ul>
+<li><img src="src/list.svg"/><strong>position</strong>
+方块的相对位置</li>
+<li><img src="src/string.svg"/><strong>block</strong> 方块ID</li>
+</ul></li>
+</ul></li>
+<li><img src="src/structure.svg"/><strong>events</strong> 事件列表
+<ul>
+<li><img src="src/list.svg"/><strong>on_load</strong> 一个<a
+href="#event">事件列表</a>，模型完成加载时执行的事件</li>
+<li><img src="src/list.svg"/><strong>on_remove</strong> 一个<a
+href="#event">事件列表</a>，模型被移除时执行的事件</li>
+<li><img src="src/list.svg"/>(事件列表ID) 一个自定义<a
+href="#event">事件列表</a></li>
+</ul></li>
+<li><img src="src/list.svg"/><strong>align_position</strong>
+(可选)对齐坐标，若无该项则不进行坐标对齐，列表中有三个数，对应XYZ三轴，实际坐标为不大于当前坐标且能被该值整除的最大数字，填入-1则表示不对该轴坐标进行对齐，示例：[1,-1,1]表示XZ轴对齐方块网格，Y轴不进行对齐</li>
+<li><img src="src/float.svg"/><strong>align_rotation</strong>
+(可选)约束偏航角，若无该项则不进行偏航角约束，示例：输入90代表实际偏航角被约束至东南西北四个方向之一，输入45代表实际偏航角被约束至八个基本方向</li>
+<li><img src="src/float.svg"/><strong>lock_rotation</strong>
+(可选)锁定旋转角，让旋转角恒为指定值，如果该项与<strong>align_rotation</strong>同时存在，则优先使用该项</li>
+</ul></li>
+</ul>
+</div>
+<div id="event">
+
+</div>
+<h3 id="事件列表">事件列表</h3>
+<p>事件列表的执行者为该模型的Marker<br />
+可以使用<strong><span class="citation" data-cites="a">@a
+[tag=skmws.s]</span></strong>来指定正在执行交互操作的玩家</p>
+<div class="nbttree">
+<ul>
+<li><img src="src/list.svg"/>(一个事件列表)
+<ul>
+<li><img src="src/structure.svg"/>(一个事件)
+<ul>
+<li><img src="src/string.svg"/><strong>type</strong> 事件类型 <br><br>
+当<strong>type:"remove"</strong>时，移除该模型，同时触发on_remove事件列表（无需提供额外参数）
+<br><br>
+当<strong>type:"destroy"</strong>时，破坏该模型，同时触发on_remove事件列表</li>
+<li><img src="src/string.svg"/><strong>sound</strong> 破坏音效</li>
+<li><img src="src/string.svg"/><strong>particle</strong> 破坏粒子
+<br><br>
+当<strong>type:"cooldown"</strong>时，设置交互冷却时间，在该时间段内模型不接受任何操作</li>
+<li><img src="src/int.svg"/><strong>time</strong> 冷却时间 <br><br>
+当<strong>type:"sit"</strong>时，让执行交互操作的玩家坐在该模型上</li>
+<li><img src="src/string.svg"/><strong>id</strong>
+元素ID，指定让玩家坐到哪个元素上 <br><br>
+当<strong>type:"call"</strong>时，执行另一事件列表，完毕后接着执行当前事件列表</li>
+<li><img src="src/string.svg"/><strong>event</strong> 事件列表ID
+<br><br> 当<strong>type:"cmd"</strong>时，执行指定命令</li>
+<li><img src="src/string.svg"/><strong>cmd</strong> 要执行的命令
+<br><br>
+当<strong>type:"execute"</strong>时，让指定元素执行指定命令</li>
+<li><img src="src/string.svg"/><strong>id</strong>
+元素ID，作为执行者</li>
+<li><img src="src/string.svg"/><strong>cmd</strong> 执行的命令 <br><br>
+当<strong>type:"merge"</strong>时，合并数据至指定元素</li>
+<li><img src="src/string.svg"/><strong>id</strong> 元素ID</li>
+<li><img src="src/string.svg"/><strong>data</strong> 合并数据 <br><br>
+当<strong>type:"element_append"</strong>时，添加元素</li>
+<li><img src="src/string.svg"/><strong>id</strong> 元素ID</li>
+<li><img src="src/structure.svg"/><strong>data</strong> (一个元素)
+<br><br> 当<strong>type:"element_remove"</strong>时，移除元素</li>
+<li><img src="src/string.svg"/><strong>id</strong> 元素ID <br><br>
+当<strong>type:"block_append"</strong>时，添加方块</li>
+<li><img src="src/list.svg"/><strong>position</strong> 放置位置</li>
+<li><img src="src/string.svg"/><strong>block</strong> 方块ID <br><br>
+当<strong>type:"block_remove"</strong>时，移除方块</li>
+<li><img src="src/list.svg"/><strong>position</strong>
+要被移除的方块的位置</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<p><br><br> 此外这些事件还有其对应的函数,{大括号里是函数的参数呢}<br />
+可以在<strong>type:"cmd"</strong>事件执行的命令中使用这些函数，不能在其他的上下文中使用</p>
+<p><strong>skmws:event/remove</strong><br />
+<strong>skmws:event/destroy {sound, particle}</strong><br />
+<strong>skmws:event/cooldown {time}</strong><br />
+<strong>skmws:event/sit {id}</strong><br />
+<strong>skmws:event/call {event}</strong><br />
+<strong>skmws:event/cmd {cmd}</strong><br />
+<strong>skmws:event/execute {id, cmd}</strong><br />
+<strong>skmws:event/merge {id, data}</strong><br />
+<strong>skmws:event/element_append {id, data}</strong><br />
+<strong>skmws:event/element_remove {id}</strong><br />
+<strong>skmws:event/block_append {position, block}</strong><br />
+<strong>skmws:event/block_remove {position}</strong></p>
+<h3 id="创建模型">创建模型</h3>
+<p>模型被定义后，需要“创建”才能将模型安放在世界中</p>
+<strong>创建模型</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function skmws:construct</span><br></pre></td></tr></table></figure> <strong>执行者</strong>
+任意<br />
+<strong>执行位置</strong> 模型的创建位置<br />
+<strong>执行旋转角</strong> 模型创建时的旋转角<br />
+<strong>参数</strong><br />
+
+<div class="nbttree">
+<ul>
+<li><img src="src/structure.svg"/>(根标签)
+<ul>
+<li><img src="src/string.svg"/><strong>id</strong> 模型ID</li>
+</ul></li>
+</ul>
+</div>
+<h3 id="例程装饰模型">例程：装饰模型</h3>
+<p>装饰模型，就是字面意思，用于装饰的模型，需要实现的功能也很简单，如下</p>
+<ul>
+<li>展示自定义模型（使用物品展示实体）</li>
+<li>模型可交互（使用交互实体）</li>
+<li>左键点击时破坏模型（在leftclick事件列表中加入destroy事件）</li>
+<li>让模型对齐方块网格（添加align_position参数）</li>
+<li>让模型偏航角约束至八个基本方向（添加align_rotation参数）</li>
+<li>拥有一格高的碰撞箱（配置屏障方块）</li>
+</ul>
+<p>定义如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">data modify storage skmws reg.model.test01 set value </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    elements<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            type<span class="punctuation">:</span><span class="string">&quot;item_display&quot;</span><span class="punctuation">,</span></span><br><span class="line">            id<span class="punctuation">:</span><span class="string">&quot;display&quot;</span><span class="punctuation">,</span></span><br><span class="line">            merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                item<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                    id<span class="punctuation">:</span><span class="string">&quot;acacia_boat&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    components<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                        custom_model_data<span class="punctuation">:</span><span class="punctuation">&#123;</span>strings<span class="punctuation">:</span><span class="punctuation">[</span><span class="string">&quot;15230006&quot;</span><span class="punctuation">]</span><span class="punctuation">&#125;</span></span><br><span class="line">                    <span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            rotation<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">180</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            type<span class="punctuation">:</span><span class="string">&quot;interaction&quot;</span><span class="punctuation">,</span></span><br><span class="line">            id<span class="punctuation">:</span><span class="string">&quot;interact&quot;</span><span class="punctuation">,</span></span><br><span class="line">            merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                width<span class="punctuation">:</span><span class="number">1.01</span><span class="punctuation">,</span></span><br><span class="line">                height<span class="punctuation">:</span><span class="number">1.01</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            events<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                leftclick<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">                    <span class="punctuation">&#123;</span>type<span class="punctuation">:</span><span class="string">&quot;destroy&quot;</span><span class="punctuation">,</span>playsound<span class="punctuation">:</span><span class="string">&quot;block.cherry_wood.break&quot;</span><span class="punctuation">,</span>particle<span class="punctuation">:</span><span class="string">&quot;cherry_planks&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">]</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    align_position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    align_rotation<span class="punctuation">:</span><span class="number">45</span><span class="punctuation">,</span></span><br><span class="line">    blocks<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span>block<span class="punctuation">:</span><span class="string">&quot;barrier&quot;</span><span class="punctuation">,</span>position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">]</span><span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>使用如下命令创建该模型 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/function skmws:construct &#123;id:&quot;test01&quot;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>技术细节</p>
+<ul>
+<li>交互实体的宽和高设定为1.01(比1稍大)，为了防止玩家点到屏障</li>
+<li>自定义模型需要用到<a
+target="_blank" rel="noopener" href="https://zh.minecraft.wiki/w/%E6%95%B0%E6%8D%AE%E7%BB%84%E4%BB%B6#custom_model_data">custom_model_data组件</a></li>
+</ul>
+<p>效果展示</p>
+<p><img src="Archive.20250808/1.gif" /></p>
+<h3 id="例程更丝滑的门">例程：更丝滑的门</h3>
+<p>原版MC的门没有开关门动画，现在来制作一个带有开关门动画的门</p>
+<ul>
+<li>使用方块展示实体显示门的模型，门分为上下两部分，所以需要用两个方块展示实体</li>
+<li>展示实体插值实现门的开关动画</li>
+<li>左键点击门即可破坏</li>
+<li>右键点击门可以打开或关闭门</li>
+<li>门关闭时，放置屏障阻止玩家通行；门打开时，移除屏障</li>
+</ul>
+<p>定义如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">data modify storage skmws reg.model.door set value </span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    elements<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            type<span class="punctuation">:</span><span class="string">&quot;interaction&quot;</span><span class="punctuation">,</span></span><br><span class="line">            id<span class="punctuation">:</span><span class="string">&quot;interact&quot;</span><span class="punctuation">,</span></span><br><span class="line">            merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                width<span class="punctuation">:</span><span class="number">1.01</span><span class="punctuation">,</span></span><br><span class="line">                height<span class="punctuation">:</span><span class="number">2</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            events<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                leftclick<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">                    <span class="punctuation">&#123;</span>type<span class="punctuation">:</span><span class="string">&quot;destroy&quot;</span><span class="punctuation">,</span>playsound<span class="punctuation">:</span><span class="string">&quot;block.cherry_wood.break&quot;</span><span class="punctuation">,</span>particle<span class="punctuation">:</span><span class="string">&quot;cherry_planks&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">                rightclick<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">                    <span class="punctuation">&#123;</span>type<span class="punctuation">:</span><span class="string">&quot;cmd&quot;</span><span class="punctuation">,</span>cmd<span class="punctuation">:</span><span class="string">&quot;function skm:door/_update&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">]</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            type<span class="punctuation">:</span><span class="string">&quot;block_display&quot;</span><span class="punctuation">,</span></span><br><span class="line">            id<span class="punctuation">:</span><span class="string">&quot;lower&quot;</span><span class="punctuation">,</span></span><br><span class="line">            merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                block_state<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                    Name<span class="punctuation">:</span><span class="string">&quot;cherry_door&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    Properties<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                        facing<span class="punctuation">:</span><span class="string">&quot;south&quot;</span><span class="punctuation">,</span></span><br><span class="line">                        half<span class="punctuation">:</span><span class="string">&quot;lower&quot;</span></span><br><span class="line">                    <span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">-0.5</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">,</span><span class="number">-0.5</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            type<span class="punctuation">:</span><span class="string">&quot;block_display&quot;</span><span class="punctuation">,</span></span><br><span class="line">            id<span class="punctuation">:</span><span class="string">&quot;upper&quot;</span><span class="punctuation">,</span></span><br><span class="line">            merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                block_state<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                    Name<span class="punctuation">:</span><span class="string">&quot;cherry_door&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    Properties<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">                        facing<span class="punctuation">:</span><span class="string">&quot;south&quot;</span><span class="punctuation">,</span></span><br><span class="line">                        half<span class="punctuation">:</span><span class="string">&quot;upper&quot;</span></span><br><span class="line">                    <span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">            position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">-0.5</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">-0.5</span><span class="punctuation">]</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    marker<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">        merge<span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">            data<span class="punctuation">:</span><span class="punctuation">&#123;</span>door<span class="punctuation">:</span><span class="number">0</span><span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    blocks<span class="punctuation">:</span><span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span>position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">]</span><span class="punctuation">,</span>block<span class="punctuation">:</span><span class="string">&quot;barrier&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span>position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">0</span><span class="punctuation">]</span><span class="punctuation">,</span>block<span class="punctuation">:</span><span class="string">&quot;barrier&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    align_position<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    align_rotation<span class="punctuation">:</span><span class="number">90</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>在刚才的定义中，Marker中存储了一项名为door的数据，这个表示门的开关状态，0表示关闭，1表示打开<br />
+然后还需要单独写一个函数来处理右键点击时开关门动作<br />
+这些功能并不由<strong>SK Model
+Workspace</strong>数据包提供，而是在实际开发中按照需求自行编写，这体现了该数据包的可拓展性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># <span class="attr">skm</span>:door/_update</span><br><span class="line"></span><br><span class="line">execute store result score door skmws run data get entity @s data.<span class="property">door</span> <span class="number">1</span></span><br><span class="line">scoreboard players add door skmws <span class="number">1</span></span><br><span class="line">execute <span class="keyword">if</span> score door skmws matches <span class="number">2</span> run scoreboard players set door skmws <span class="number">0</span></span><br><span class="line">execute store result entity @s data.<span class="property">door</span> int <span class="number">1</span> run scoreboard players get door skmws</span><br><span class="line"></span><br><span class="line">execute <span class="keyword">if</span> score door skmws matches <span class="number">0</span> run <span class="keyword">function</span> <span class="attr">skm</span>:door/_close</span><br><span class="line">execute <span class="keyword">if</span> score door skmws matches <span class="number">1</span> run <span class="keyword">function</span> <span class="attr">skm</span>:door/_open</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># <span class="attr">skm</span>:door/_open</span><br><span class="line"></span><br><span class="line">playsound block.<span class="property">cherry_wood_door</span>.<span class="property">open</span> block @a ~ ~ ~</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/block_remove &#123;<span class="attr">position</span>:[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/block_remove &#123;<span class="attr">position</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>]&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/merge &#123;<span class="attr">id</span>:<span class="string">&quot;upper&quot;</span>,<span class="attr">data</span>:&#123;<span class="attr">transformation</span>:&#123;<span class="attr">left_rotation</span>:&#123;<span class="attr">axis</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],<span class="attr">angle</span>:-<span class="number">1.5708</span>&#125;,<span class="attr">translation</span>:[<span class="number">0.1875</span>,<span class="number">0</span>,<span class="number">0</span>]&#125;,<span class="attr">start_interpolation</span>:<span class="number">0</span>,<span class="attr">interpolation_duration</span>:<span class="number">5</span>&#125;&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/merge &#123;<span class="attr">id</span>:<span class="string">&quot;lower&quot;</span>,<span class="attr">data</span>:&#123;<span class="attr">transformation</span>:&#123;<span class="attr">left_rotation</span>:&#123;<span class="attr">axis</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],<span class="attr">angle</span>:-<span class="number">1.5708</span>&#125;,<span class="attr">translation</span>:[<span class="number">0.1875</span>,<span class="number">0</span>,<span class="number">0</span>]&#125;,<span class="attr">start_interpolation</span>:<span class="number">0</span>,<span class="attr">interpolation_duration</span>:<span class="number">5</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># <span class="attr">skm</span>:door/_close</span><br><span class="line"></span><br><span class="line">playsound block.<span class="property">cherry_wood_door</span>.<span class="property">close</span> block @a ~ ~ ~</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/block_append &#123;<span class="attr">position</span>:[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],<span class="attr">block</span>:<span class="string">&quot;barrier&quot;</span>&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/block_append &#123;<span class="attr">position</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],<span class="attr">block</span>:<span class="string">&quot;barrier&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/merge &#123;<span class="attr">id</span>:<span class="string">&quot;upper&quot;</span>,<span class="attr">data</span>:&#123;<span class="attr">transformation</span>:&#123;<span class="attr">left_rotation</span>:&#123;<span class="attr">axis</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],<span class="attr">angle</span>:<span class="number">0</span>&#125;,<span class="attr">translation</span>:[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]&#125;,<span class="attr">start_interpolation</span>:<span class="number">0</span>,<span class="attr">interpolation_duration</span>:<span class="number">5</span>&#125;&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="attr">skmws</span>:event/merge &#123;<span class="attr">id</span>:<span class="string">&quot;lower&quot;</span>,<span class="attr">data</span>:&#123;<span class="attr">transformation</span>:&#123;<span class="attr">left_rotation</span>:&#123;<span class="attr">axis</span>:[<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],<span class="attr">angle</span>:<span class="number">0</span>&#125;,<span class="attr">translation</span>:[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]&#125;,<span class="attr">start_interpolation</span>:<span class="number">0</span>,<span class="attr">interpolation_duration</span>:<span class="number">5</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>效果展示</p>
+<p><img src="Archive.20250808/2.gif" /></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Minecraft/" rel="tag"><i class="fa fa-tag"></i> Minecraft</a>
+          </div>
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer" style="background-color:rgba(0,0,0,1);">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">抽卡就免了吧，保底全歪的样子太可笑了！</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+<span id="timeDate">载入天数...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("4/23/2024 22:00:00"); //修改为你的网站开始运行的时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "SK在此已祈祷 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+<span id="moeicp"><a href="https://icp.gov.moe/?keyword=20252147" target="_blank">萌ICP备20252147号</a></span>
+
+    </div>
+  </footer>
+
+  
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.min.js","integrity":"sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ymqlgthbSakuraDream","repo":"paimontalk","client_id":"Ov23lipENLXHls9CpUMY","client_secret":"61eac6d23504a2c901bbd67bd50c70a27138e793","admin_user":"ymqlgthbSakuraDream","distraction_free_mode":true,"proxy":"https://proxy-gitalk-api.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"ccfaabb7d60f261168389ff2ebdf35d2"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+
+</body>
+</html>

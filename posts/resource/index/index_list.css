@@ -1,0 +1,27 @@
+.container {
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 800px;
+}
+
+.rectangle {
+    border: 2px solid #727272;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+}
+
+.highlight-text {
+    color: #9fdcff;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.normal-text {
+    line-height: 1.5;
+}
