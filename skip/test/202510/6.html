@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粉白配色方案 - 优雅设计</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        :root {
+            --primary-white: #FFFFFF;
+            --light-pink: #FFF2F5;
+            --accent-pink: #FFE4E8;
+            --highlight-pink: #FF6B93;
+            --dark-text: #333333;
+            --medium-text: #5A4A5F;
+            --shadow: 0 2px 16px rgba(255, 107, 147, 0.15);
+            --border: 1px solid #FFE4E8;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--light-pink) 0%, #FFFAFB 100%);
+            color: var(--dark-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            background: var(--light-pink);
+            padding: 0 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: var(--border);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--highlight-pink);
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--highlight-pink), #FF8EAB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--medium-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--highlight-pink);
+        }
+        
+        .nav-links a.active  {
+            background: rgba(255, 107, 147, 0.1);
+            color: var(--highlight-pink);
+        }
+        
+        .nav-links a.active::after  {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 5px;
+            height: 5px;
+            background: var(--highlight-pink);
+            border-radius: 50%;
+        }
+        
+        /* 日期显示样式 */
+        .date-container {
+            text-align: center;
+            padding: 25px 0 15px;
+            background: linear-gradient(to right, rgba(255, 107, 147, 0.1), rgba(255, 228, 232, 0.3), rgba(255, 107, 147, 0.1));
+            margin: 20px 10% 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+        
+        .date-display {
+            font-size: 1.1rem;
+            color: var(--medium-text);
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            border: var(--border);
+        }
+        
+        .date-display i {
+            color: var(--highlight-pink);
+            margin-right: 8px;
+        }
+        
+        /* 主内容区域 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--medium-text);
+            display: inline-block;
+            padding: 0 20px;
+            background: var(--primary-white);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-pink), transparent);
+            z-index: 1;
+        }
+        
+        /* 卡片样式 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            background: var(--primary-white);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: var(--border);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(255, 107, 147, 0.25);
+        }
+        
+        .card-header {
+            background: linear-gradient(90deg, var(--highlight-pink), #FF8EAB);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-header i {
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-title {
+            color: var(--medium-text);
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .card-content {
+            color: var(--dark-text);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .color-palette {
+            display: flex;
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        
+        /* 按钮样式 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--highlight-pink);
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 107, 147, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #E55A7C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 107, 147, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--highlight-pink);
+            border: 2px solid var(--highlight-pink);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 107, 147, 0.1);
+        }
+        
+        /* 配色展示 */
+        .color-showcase {
+            background: var(--primary-white);
+            border-radius: 18px;
+            padding: 30px;
+            margin: 50px 0;
+            box-shadow: var(--shadow);
+            border: var(--border);
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .color-swatch {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .color-info {
+            padding: 15px;
+            background: white;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .color-hex {
+            font-size: 14px;
+            color: var(--medium-text);
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--medium-text);
+            margin-top: 50px;
+            border-top: var(--border);
+            background: rgba(255, 255, 255, 0.6);
+            max-width: 1200px;
+            margin: 50px auto 0;
+            border-radius: 18px 18px 0 0;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 5%;
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .date-container {
+                margin: 20px 5% 30px;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-palette"></i>
+            <span class="logo-text">粉白配色方案</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fas fa-home"></i> 首页</a></li>
+            <li><a href="#"><i class="fas fa-swatchbook"></i> 配色</a></li>
+            <li><a href="#"><i class="fas fa-pencil-ruler"></i> 设计</a></li>
+            <li><a href="#"><i class="fas fa-download"></i> 资源</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> 联系</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 日期显示 -->
+    <div class="date-container">
+        <div class="date-display">
+            <i class="fas fa-calendar-alt"></i> 
+            2025年10月11日 星期六 | 农历乙巳蛇年八月廿十 | 23:38 
+        </div>
+    </div>
+    
+    <!-- 主内容区域 -->
+    <div class="container">
+        <div class="section-title">
+            <h2>优雅粉白配色方案</h2>
+        </div>
+        
+        <div class="card-grid">
+            <!-- 卡片1: 配色方案 -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>配色方案</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">核心色彩规范</h4>
+                    <p class="card-content">
+                        此方案以白色和淡粉色为基础，营造出柔和、优雅的视觉效果。
+                        主要适用于女性产品、时尚设计、美容行业等需要传达温柔、浪漫感觉的场景。
+                    </p>
+                    
+                    <div class="color-palette">
+                        <div class="color-item" style="background: #FFFFFF;">主白<br>#FFFFFF</div>
+                        <div class="color-item" style="background: #FFF2F5;">淡粉<br>#FFF2F5</div>
+                        <div class="color-item" style="background: #FFE4E8; color: #333;">浅珊瑚<br>#FFE4E8</div>
+                        <div class="color-item" style="background: #FF6B93;">樱花粉<br>#FF6B93</div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> 下载配色文件 
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 卡片2: 应用场景 -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>应用场景</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">设计元素应用</h4>
+                    <p class="card-content">
+                        粉白配色方案在各种UI元素中的应用：
+                    </p>
+                    <ul class="card-content" style="padding-left: 20px;">
+                        <li>导航栏与标题：淡粉色背景</li>
+                        <li>内容卡片：白色背景+浅粉边框</li>
+                        <li>按钮：樱花粉主按钮+白色次按钮</li>
+                        <li>图标：统一使用樱花粉线性图标</li>
+                        <li>分隔线：浅珊瑚粉虚线</li>
+                    </ul>
+                    
+                    <a href="#" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> 查看示例 
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 卡片3: 视觉优化 -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-magic"></i>
+                    <h3>视觉优化</h3>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">设计细节与技巧</h4>
+                    <p class="card-content">
+                        增强视觉体验的细节处理：
+                    </p>
+                    <ul class="card-content" style="padding-left: 20px;">
+                        <li>阴影：浅粉微投影增强层次感</li>
+                        <li>悬停效果：浅珊瑚粉渐变过渡</li>
+                        <li>圆角：15px柔和边缘</li>
+                        <li>渐变：在重点区域使用柔和的粉白渐变</li>
+                        <li>动画：微妙的交互动效增强体验</li>
+                    </ul>
+                    
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-book"></i> 设计指南 
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 配色展示 -->
+        <div class="section-title">
+            <h2>完整配色展示</h2>
+        </div>
+        
+        <div class="color-showcase">
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; color: #333;">
+                        #FFFFFF 
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">纯白</div>
+                        <div class="color-hex">背景/卡片底色</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFF2F5; color: #333;">
+                        #FFF2F5 
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">淡粉</div>
+                        <div class="color-hex">导航/标题背景</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFE4E8; color: #333;">
+                        #FFE4E8 
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">浅珊瑚</div>
+                        <div class="color-hex">悬停效果/分割线</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FF6B93;">
+                        #FF6B93 
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">樱花粉</div>
+                        <div class="color-hex">按钮/图标/强调</div>
+                    </div>
+                </div>
+                
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #5A4A5F;">
+                        #5A4A5F 
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">灰紫</div>
+                        <div class="color-hex">次要文字</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>© 2025 粉白配色方案 | 优雅而现代的UI设计系统</p>
+        <p>当前时间：2025年10月11日 星期六 23:38</p>
+    </div>
+    
+    <script>
+        // 卡片悬停效果增强 
+        document.querySelectorAll('.card').forEach(card  => {
+            card.addEventListener('mouseenter',  function() {
+                this.style.transform  = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave',  function() {
+                this.style.transform  = 'translateY(0)';
+            });
+        });
+        
+        // 按钮悬停效果 
+        document.querySelectorAll('.btn').forEach(btn  => {
+            btn.addEventListener('mouseenter',  function() {
+                this.style.transform  = 'translateY(-2px)';
+            });
+            
+            btn.addEventListener('mouseleave',  function() {
+                this.style.transform  = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

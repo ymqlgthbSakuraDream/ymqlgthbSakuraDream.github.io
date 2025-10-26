@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实用主义个人主页 - 2025年10月11日</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f7e8; /* 淡黄色背景 */
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #e6f0fa, #d4e7f8); /* 淡蓝色渐变 */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .date-display {
+            font-size: 1.1rem;
+            color: #2c5e92;
+            background-color: rgba(255,255,255,0.7);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        
+        /* 个人信息区域 */
+        .profile-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e6f0fa, #b8d6f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #2c5e92;
+            margin-right: 15px;
+        }
+        
+        .profile-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: #2a4e77;
+        }
+        
+        .profile-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .bio {
+            background-color: #f8f9fc;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 3px solid #a3c6f0;
+        }
+        
+        .contact-info {
+            margin-top: 25px;
+        }
+        
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: #2c5e92;
+            font-size: 1.1rem;
+        }
+        
+        /* 主要内容区域 */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            padding: 25px;
+        }
+        
+        .card h2 {
+            color: #2a4e77;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e6f0fa;
+            font-size: 1.5rem;
+        }
+        
+        /* 搜索区域样式 */
+        .search-container {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 14px 20px;
+            padding-left: 50px;
+            border: 2px solid #c2d8ee;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background-color: #f8fbfe;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #5a9de4;
+            box-shadow: 0 0 0 3px rgba(90, 157, 228, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b9bd2;
+            font-size: 1.2rem;
+        }
+        
+        .search-engines {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .engine-btn {
+            background-color: #e6f0fa;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .engine-btn.active,  .engine-btn:hover {
+            background-color: #5a9de4;
+            color: white;
+        }
+        
+        /* 链接区域样式 */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 20px;
+        }
+        
+        .link-category {
+            margin-bottom: 30px;
+        }
+        
+        .link-category h3 {
+            font-size: 1.2rem;
+            color: #2a4e77;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #a3c6f0;
+        }
+        
+        .link-list {
+            list-style: none;
+        }
+        
+        .link-list li {
+            margin-bottom: 10px;
+        }
+        
+        .link-list a {
+            text-decoration: none;
+            color: #3a6ea5;
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+        
+        .link-list a:hover {
+            background-color: #e6f0fa;
+            color: #2a4e77;
+            transform: translateX(5px);
+        }
+        
+        .link-list a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+            color: #5a9de4;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #e6e6e6;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-section {
+                position: static;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>实用主义个人门户</h1>
+            <div class="date-display">
+                <i class="fas fa-calendar-alt"></i> 2025年10月11日 星期六 农历八月廿十 <span id="live-time"></span>
+            </div>
+        </header>
+        
+        <!-- 左侧个人信息区域 -->
+        <aside class="profile-section">
+            <div class="profile-header">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h1>张明</h1>
+                    <p>UI设计师 & 前端开发</p>
+                </div>
+            </div>
+            
+            <div class="bio">
+                <p>专注于打造实用高效的网络体验，结合日式简约美学与功能主义，信奉"形式追随功能"的设计理念。目前在互联网行业从事用户体验设计工作。</p>
+            </div>
+            
+            <div class="contact-info">
+                <div><i class="fas fa-envelope"></i> contact@example.com</div> 
+                <div><i class="fab fa-github"></i> github.com/username</div> 
+                <div><i class="fas fa-map-marker-alt"></i> 中国，上海市</div>
+                <div><i class="fas fa-link"></i> personal-website.com</div> 
+            </div>
+        </aside>
+        
+        <!-- 右侧主要内容区域 -->
+        <main class="main-content">
+            <!-- 搜索区域 -->
+            <section class="card">
+                <h2><i class="fas fa-search"></i> 多功能搜索</h2>
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-box" placeholder="搜索网页、资讯或知识库...">
+                </div>
+                <div class="search-engines">
+                    <button class="engine-btn active">Google</button>
+                    <button class="engine-btn">百度</button>
+                    <button class="engine-btn">Bing</button>
+                    <button class="engine-btn">DuckDuckGo</button>
+                    <button class="engine-btn">知乎</button>
+                </div>
+            </section>
+            
+            <!-- 常用网站链接 -->
+            <section class="card">
+                <h2><i class="fas fa-bookmark"></i> 实用资源导航</h2>
+                <div class="links-grid">
+                    <div class="link-category">
+                        <h3>开发工具</h3>
+                        <ul class="link-list">
+                            <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="#"><i class="fab fa-stack-overflow"></i> Stack Overflow</a></li>
+                            <li><a href="#"><i class="fab fa-codepen"></i> CodePen</a></li>
+                            <li><a href="#"><i class="fab fa-js"></i> MDN Web Docs</a></li>
+                            <li><a href="#"><i class="fas fa-code"></i> W3Schools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-category">
+                        <h3>设计资源</h3>
+                        <ul class="link-list">
+                            <li><a href="#"><i class="fab fa-figma"></i> Figma</a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i> Dribbble</a></li>
+                            <li><a href="#"><i class="fas fa-palette"></i> Adobe Color</a></li>
+                            <li><a href="#"><i class="fas fa-icons"></i> Font Awesome</a></li>
+                            <li><a href="#"><i class="fas fa-images"></i> Unsplash</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-category">
+                        <h3>学习平台</h3>
+                        <ul class="link-list">
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            <li><a href="#"><i class="fas fa-graduation-cap"></i> Coursera</a></li>
+                            <li><a href="#"><i class="fab fa-udemy"></i> Udemy</a></li>
+                            <li><a href="#"><i class="fab fa-free-code-camp"></i> freeCodeCamp</a></li>
+                            <li><a href="#"><i class="fas fa-book"></i> 知乎专栏</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-category">
+                        <h3>资讯媒体</h3>
+                        <ul class="link-list">
+                            <li><a href="#"><i class="fas fa-newspaper"></i> 每日新闻</a></li>
+                            <li><a href="#"><i class="fab fa-weibo"></i> 微博热点</a></li>
+                            <li><a href="#"><i class="fab fa-reddit"></i> Reddit</a></li>
+                            <li><a href="#"><i class="fas fa-rss"></i> RSS订阅</a></li>
+                            <li><a href="#"><i class="fab fa-hacker-news"></i> Hacker News</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>实用主义个人门户 © 2025 | 最后更新: 2025年10月11日</p>
+        </footer>
+    </div>
+ 
+    <script>
+        // 实时时间更新 
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2,  '0');
+            const minutes = String(now.getMinutes()).padStart(2,  '0');
+            const seconds = String(now.getSeconds()).padStart(2,  '0');
+            document.getElementById('live-time').textContent  = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        // 初始化时间并每秒更新
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // 搜索引擎切换功能 
+        const engineBtns = document.querySelectorAll('.engine-btn'); 
+        engineBtns.forEach(btn  => {
+            btn.addEventListener('click',  function() {
+                document.querySelector('.engine-btn.active').classList.remove('active'); 
+                this.classList.add('active'); 
+            });
+        });
+        
+        // 搜索功能
+        const searchBox = document.querySelector('.search-box'); 
+        searchBox.addEventListener('keypress',  function(e) {
+            if(e.key  === 'Enter') {
+                const activeEngine = document.querySelector('.engine-btn.active').textContent; 
+                const query = encodeURIComponent(this.value); 
+                let searchUrl = '';
+                
+                switch(activeEngine) {
+                    case 'Google':
+                        searchUrl = `https://www.google.com/search?q=${query}`; 
+                        break;
+                    case '百度':
+                        searchUrl = `https://www.baidu.com/s?wd=${query}`; 
+                        break;
+                    case 'Bing':
+                        searchUrl = `https://www.bing.com/search?q=${query}`; 
+                        break;
+                    case 'DuckDuckGo':
+                        searchUrl = `https://duckduckgo.com/?q=${query}`; 
+                        break;
+                    case '知乎':
+                        searchUrl = `https://www.zhihu.com/search?q=${query}`; 
+                        break;
+                }
+                
+                window.open(searchUrl,  '_blank');
+                this.value  = '';
+            }
+        });
+    </script>
+</body>
+</html>

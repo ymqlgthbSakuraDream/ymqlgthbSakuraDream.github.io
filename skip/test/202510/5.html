@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>千禧年信息门户 - 张明的个人主页</title>
+    <style>
+        /* 全局千禧年风格 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #e0e0ff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+CiAgPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZDBkMGZmIi8+CiAgPHBhdGggZD0iTTAgMEwxMCAxME0xMCAwTDAgMTAiIHN0cm9rZT0iI2NjY2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==');
+            color: #000;
+            line-height: 1.4;
+            padding: 10px;
+            font-size: 12px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border: 5px solid #ff66cc;
+            box-shadow: 0 0 20px #ff00ff;
+        }
+        
+        /* 超密集头部样式 */
+        .header-row {
+            display: flex;
+            flex-wrap: wrap;
+            background: linear-gradient(to right, #ff66cc, #66ccff, #ffff66);
+            padding: 5px;
+            border-bottom: 5px dotted #00ff00;
+        }
+        
+        .header-cell {
+            flex: 1;
+            min-width: 200px;
+            padding: 5px;
+            border-right: 2px dashed #ff00ff;
+        }
+        
+        .header-cell:last-child {
+            border-right: none;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: #0000ff;
+            text-shadow: 2px 2px 0 #ff00ff;
+            margin-bottom: 5px;
+        }
+        
+        .date-display {
+            font-size: 0.9rem;
+            background-color: #ffff00;
+            display: inline-block;
+            padding: 3px 8px;
+            border: 1px dashed #ff0000;
+        }
+        
+        /* 导航菜单 - 密集版 */
+        .nav-menu {
+            background: #00ccff;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 3px solid #ff3399;
+        }
+        
+        .nav-menu a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 2px;
+            padding: 2px 6px;
+            background: #ffff66;
+            border: 1px solid #ff6600;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        
+        .nav-menu a:hover {
+            background: #ff9966;
+            text-decoration: underline;
+        }
+        
+        /* 主要内容区域 - 超密集布局 */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+        
+        /* 密集内容区块 */
+        .content-block {
+            flex: 1;
+            min-width: 300px;
+            margin: 5px;
+            padding: 10px;
+            background: #ffffe0;
+            border: 2px solid #ffcc00;
+        }
+        
+        .content-block h2 {
+            color: #ff0066;
+            background: #ccffff;
+            padding: 5px;
+            margin: -10px -10px 8px -10px;
+            border-bottom: 2px solid #00ccff;
+            font-size: 1.2rem;
+        }
+        
+        /* 超密集链接列表 */
+        .dense-links {
+            columns: 3;
+            column-gap: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .dense-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            break-inside: avoid;
+        }
+        
+        .dense-links li {
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .dense-links a {
+            color: #0000cc;
+            text-decoration: none;
+            display: block;
+            padding: 2px 4px;
+            background: #e6e6ff;
+            border-left: 2px solid #6666ff;
+        }
+        
+        .dense-links a:hover {
+            background: #ccccff;
+            text-decoration: underline;
+        }
+        
+        /* 微型表格 */
+        .micro-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+        
+        .micro-table th {
+            background: #ffcc99;
+            padding: 3px;
+            text-align: left;
+            border: 1px solid #ff9966;
+        }
+        
+        .micro-table td {
+            padding: 3px;
+            border: 1px solid #ff9966;
+        }
+        
+        .micro-table tr:nth-child(even) {
+            background: #ffffcc;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background: #000;
+            color: #0f0;
+            padding: 8px;
+            text-align: center;
+            border-top: 3px solid #0f0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .marquee {
+            background: #000;
+            color: #ff0;
+            padding: 3px 0;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        
+        /* 动画元素 */
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        
+        .rotate {
+            display: inline-block;
+            animation: rotate 4s infinite linear;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* 标签样式 */
+        .tag {
+            display: inline-block;
+            background: #ccffcc;
+            border: 1px solid #00cc66;
+            padding: 1px 4px;
+            margin: 1px;
+            font-size: 0.75rem;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 超密集头部 -->
+        <div class="header-row">
+            <div class="header-cell">
+                <h1>📡 张明的信息门户</h1>
+                <div class="date-display">
+                    今天是<span class="blink">2025年10月11日 星期六</span> 农历乙巳蛇年八月廿十
+                </div>
+            </div>
+            <div class="header-cell">
+                <div class="counter">
+                    <strong>访问统计:</strong> 今日: 284 本周: 1,842 总计: 102,394 
+                </div>
+                <div style="margin-top: 5px;">
+                    <strong>在线用户:</strong> 12 位会员 | 35 位游客
+                </div>
+            </div>
+            <div class="header-cell">
+                <div><strong>天气:</strong> 北京 晴 18°C～26°C 湿度: 45%</div>
+                <div style="margin-top: 5px;">
+                    <strong>股票:</strong> 上证: 3,284.56 <span style="color:red">↑1.2%</span> 
+                    深证: 10,845.32 <span style="color:green">↓0.4%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 超密集导航 -->
+        <div class="nav-menu">
+            <a href="#">🏠 首页</a>
+            <a href="#">📰 新闻聚合</a>
+            <a href="#">🔍 搜索引擎</a>
+            <a href="#">💾 下载中心</a>
+            <a href="#">🎮 游戏天地</a>
+            <a href="#">🎵 音乐MP3</a>
+            <a href="#">💬 聊天室</a>
+            <a href="#">📚 学习资源</a>
+            <a href="#">🛒 购物商城</a>
+            <a href="#">📧 免费邮箱</a>
+            <a href="#">📱 手机服务</a>
+            <a href="#">💻 软件下载</a>
+            <a href="#">📺 在线视频</a>
+            <a href="#">📷 图片分享</a>
+            <a href="#">👥 社区论坛</a>
+            <a href="#">🌐 网页制作</a>
+            <a href="#">📊 股市行情</a>
+            <a href="#">🗺️ 地图服务</a>
+            <a href="#">📅 日历日程</a>
+            <a href="#">🔄 实用工具</a>
+        </div>
+        
+        <!-- 超密集主内容区 -->
+        <div class="main-content">
+            <!-- 区块1：搜索引擎与工具 -->
+            <div class="content-block">
+                <h2>🔍 搜索引擎与工具</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-bottom: 10px;">
+                    <input type="text" placeholder="Google搜索..." style="grid-column: span 2; padding: 4px;">
+                    <button style="background: #ff6600; color: #fff; border: 1px solid #cc3300; padding: 4px;">搜索</button>
+                </div>
+                
+                <div class="dense-links">
+                    <ul>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">百度</a></li>
+                        <li><a href="#">Yahoo!</a></li>
+                        <li><a href="#">Altavista</a></li>
+                        <li><a href="#">Lycos</a></li>
+                        <li><a href="#">HotBot</a></li>
+                        <li><a href="#">Excite</a></li>
+                        <li><a href="#">WebCrawler</a></li>
+                        <li><a href="#">Infoseek</a></li>
+                        <li><a href="#">Ask Jeeves</a></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin: 8px 0 5px; color: #cc0000;">🛠️ 实用工具</h3>
+                <div>
+                    <span class="tag"><a href="#">在线翻译</a></span>
+                    <span class="tag"><a href="#">单位换算</a></span>
+                    <span class="tag"><a href="#">货币汇率</a></span>
+                    <span class="tag"><a href="#">天气预报</a></span>
+                    <span class="tag"><a href="#">邮编查询</a></span>
+                    <span class="tag"><a href="#">列车时刻</a></span>
+                    <span class="tag"><a href="#">航班查询</a></span>
+                    <span class="tag"><a href="#">万年历</a></span>
+                    <span class="tag"><a href="#">BMI计算</a></span>
+                    <span class="tag"><a href="#">IP查询</a></span>
+                </div>
+            </div>
+            
+            <!-- 区块2：新闻聚合 -->
+            <div class="content-block">
+                <h2>📰 今日头条新闻</h2>
+                <div class="dense-links">
+                    <ul>
+                        <li><a href="#">我国成功发射新一代通信卫星，实现全球覆盖</a> <span style="color:red; font-size:0.75rem;">[new]</span></li>
+                        <li><a href="#">全球科技峰会召开，人工智能伦理成为焦点议题</a></li>
+                        <li><a href="#">新能源汽车销量再创新高，市场份额突破40%</a></li>
+                        <li><a href="#">科学家发现新型材料，电池充电速度提升10倍</a></li>
+                        <li><a href="#">国际空间站扩建工程完成，可容纳12名宇航员</a></li>
+                        <li><a href="#">央行宣布降息0.25个百分点，刺激经济增长</a></li>
+                        <li><a href="#">全球气候协议新目标：2030年前减排50%</a></li>
+                        <li><a href="#">医学突破：新型抗癌药物进入临床试验阶段</a></li>
+                        <li><a href="#">2025全球互联网用户突破60亿，普及率达75%</a></li>
+                        <li><a href="#">考古学家发现千年古城遗址，改写历史认知</a></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin: 10px 0 5px; color: #cc0000;">📋 分类新闻</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; font-size: 0.8rem;">
+                    <div>
+                        <strong>科技</strong>
+                        <ul>
+                            <li><a href="#">量子计算机突破1000量子比特</a></li>
+                            <li><a href="#">6G网络研发进入新阶段</a></li>
+                            <li><a href="#">可折叠手机价格大幅下降</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>财经</strong>
+                        <ul>
+                            <li><a href="#">数字货币市场回暖</a></li>
+                            <li><a href="#">全球股市震荡上行</a></li>
+                            <li><a href="#">黄金价格创年内新高</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>娱乐</strong>
+                        <ul>
+                            <li><a href="#">经典电影《黑客帝国》重映</a></li>
+                            <li><a href="#">虚拟偶像演唱会门票热销</a></li>
+                            <li><a href="#">怀旧游戏展本周末举行</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 区块3：资源下载 -->
+            <div class="content-block">
+                <h2>💾 资源下载中心</h2>
+                <div class="dense-links">
+                    <ul>
+                        <li><a href="#">Windows 12 预览版下载</a> <span class="tag">系统</span></li>
+                        <li><a href="#">Office 2025 专业版</a> <span class="tag">办公</span></li>
+                        <li><a href="#">Photoshop CS 怀旧版</a> <span class="tag">设计</span></li>
+                        <li><a href="#">WinRAR 7.0 中文版</a> <span class="tag">工具</span></li>
+                        <li><a href="#">QQ 怀旧版 2009</a> <span class="tag">通讯</span></li>
+                        <li><a href="#">千千静听 5.0 经典版</a> <span class="tag">音乐</span></li>
+                        <li><a href="#">Flash Player 怀旧版</a> <span class="tag">插件</span></li>
+                        <li><a href="#">Nero Burning ROM</a> <span class="tag">刻录</span></li>
+                        <li><a href="#">迅雷 5.8 经典版</a> <span class="tag">下载</span></li>
+                        <li><a href="#">MSN Messenger 怀旧版</a> <span class="tag">通讯</span></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin: 10px 0 5px; color: #cc0000;">📁 热门分类</h3>
+                <div>
+                    <span class="tag"><a href="#">系统工具</a></span>
+                    <span class="tag"><a href="#">网络软件</a></span>
+                    <span class="tag"><a href="#">图形图像</a></span>
+                    <span class="tag"><a href="#">多媒体类</a></span>
+                    <span class="tag"><a href="#">安全相关</a></span>
+                    <span class="tag"><a href="#">编程开发</a></span>
+                    <span class="tag"><a href="#">教育教学</a></span>
+                    <span class="tag"><a href="#">游戏娱乐</a></span>
+                    <span class="tag"><a href="#">驱动程序</a></span>
+                    <span class="tag"><a href="#">硬件工具</a></span>
+                </div>
+            </div>
+            
+            <!-- 区块4：社区与交流 -->
+            <div class="content-block">
+                <h2>💬 社区与交流</h2>
+                <table class="micro-table">
+                    <tr>
+                        <th>论坛</th>
+                        <th>主题</th>
+                        <th>最后发表</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#">技术交流区</a></td>
+                        <td>1,284</td>
+                        <td>2025-10-11 22:15</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">网页设计区</a></td>
+                        <td>892</td>
+                        <td>2025-10-11 21:30</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">资源共享区</a></td>
+                        <td>2,451</td>
+                        <td>2025-10-11 20:45</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">怀旧游戏区</a></td>
+                        <td>3,672</td>
+                        <td>2025-10-11 19:20</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">音乐影视区</a></td>
+                        <td>1,753</td>
+                        <td>2025-10-11 18:55</td>
+                    </tr>
+                </table>
+                
+                <h3 style="margin: 10px 0 5px; color: #cc0000;">💌 最新留言</h3>
+                <div style="font-size: 0.8rem; max-height: 150px; overflow-y: auto; border: 1px solid #ccc; padding: 5px;">
+                    <div><strong>小明:</strong> 谁有Photoshop 7.0的序列号？急求！<span style="color:#666; float:right;">23:15</span></div>
+                    <div><strong>网页设计师:</strong> 推荐一个千禧年风格的CSS模板<span style="color:#666; float:right;">22:50</span></div>
+                    <div><strong>游戏达人:</strong> 红色警戒2完整版下载地址<span style="color:#666; float:right;">22:30</span></div>
+                    <div><strong>音乐迷:</strong> 求周杰伦2004年演唱会MP3<span style="color:#666; float:right;">21:45</span></div>
+                    <div><strong>技术宅:</strong> Windows 98虚拟机配置教程<span style="color:#666; float:right;">21:20</span></div>
+                    <div><strong>怀旧派:</strong> 谁还记得拨号上网的声音？<span style="color:#666; float:right;">20:55</span></div>
+                </div>
+            </div>
+            
+            <!-- 区块5：娱乐休闲 -->
+            <div class="content-block">
+                <h2>🎮 娱乐休闲</h2>
+                <div class="dense-links">
+                    <ul>
+                        <li><a href="#">在线小游戏合集</a> <span class="tag">游戏</span></li>
+                        <li><a href="#">经典MP3下载</a> <span class="tag">音乐</span></li>
+                        <li><a href="#">怀旧动漫在线</a> <span class="tag">动漫</span></li>
+                        <li><a href="#">电子书下载区</a> <span class="tag">书籍</span></li>
+                        <li><a href="#">手机铃声下载</a> <span class="tag">手机</span></li>
+                        <li><a href="#">桌面壁纸大全</a> <span class="tag">图片</span></li>
+                        <li><a href="#">搞笑Flash动画</a> <span class="tag">动画</span></li>
+                        <li><a href="#">星座运势查询</a> <span class="tag">生活</span></li>
+                        <li><a href="#">谜语脑筋急转弯</a> <span class="tag">益智</span></li>
+                        <li><a href="#">虚拟宠物养成</a> <span class="tag">养成</span></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin: 10px 0 5px; color: #cc0000;">🕹️ 热门游戏</h3>
+                <div style="font-size: 0.8rem;">
+                    <div><a href="#">红色警戒2</a> | <a href="#">下载</a> | <a href="#">攻略</a> | <a href="#">MOD</a></div>
+                    <div><a href="#">仙剑奇侠传98</a> | <a href="#">下载</a> | <a href="#">存档</a> | <a href="#">修改器</a></div>
+                    <div><a href="#">星际争霸1.08</a> | <a href="#">下载</a> | <a href="#">地图</a> | <a href="#">录像</a></div>
+                    <div><a href="#">帝国时代2</a> | <a href="#">下载</a> | <a href="#">补丁</a> | <a href="#">联机</a></div>
+                    <div><a href="#">大富翁4</a> | <a href="#">下载</a> | <a href="#">秘籍</a> | <a href="#">角色</a></div>
+                </div>
+            </div>
+            
+            <!-- 区块6：学习资源 -->
+            <div class="content-block">
+                <h2>📚 学习资源</h2>
+                <div class="dense-links">
+                    <ul>
+                        <li><a href="#">HTML 4.01 规范手册</a> <span class="tag">网页</span></li>
+                        <li><a href="#">CSS 2.0 完全参考</a> <span class="tag">样式</span></li>
+                        <li><a href="#">JavaScript 教程</a> <span class="tag">脚本</span></li>
+                        <li><a href="#">Photoshop 7.0 教程</a> <span class="tag">设计</span></li>
+                        <li><a href="#">Flash MX 动画制作</a> <span class="tag">动画</span></li>
+                        <li><a href="#">Perl CGI 编程指南</a> <span class="tag">后端</span></li>
+                        <li><a href="#">Visual Basic 6.0 教程</a> <span class="tag">编程</span></li>
+                        <li><a href="#">MySQL 数据库基础</a> <span class="tag">数据库</span></li>
+                        <li><a href="#">计算机硬件组装</a> <span class="tag">硬件</span></li>
+                        <li><a href="#">网络基础与建站</a> <span class="tag">网络</span></li>
+                    </ul>
+                </div>
+                
+                <h3 style="margin: 10px 0 5px; color: #cc0000;">📝 教程目录</h3>
+                <div style="font-size: 0.8rem; columns: 2; column-gap: 15px;">
+                    <ul>
+                        <li><a href="#">HTML基础教程</a></li>
+                        <li><a href="#">表格布局技巧</a></li>
+                        <li><a href="#">框架集使用指南</a></li>
+                        <li><a href="#">CSS字体样式</a></li>
+                        <li><a href="#">DHTML动态效果</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">JavaScript表单验证</a></li>
+                        <li><a href="#">网页计数器制作</a></li>
+                        <li><a href="#">弹出窗口技巧</a></li>
+                        <li><a href="#">状态栏文字特效</a></li>
+                        <li><a href="#">鼠标跟随效果</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚信息 -->
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left">
+                ★★★★★ 欢迎光临！本网站最佳分辨率1024×768，推荐使用IE6.0以上浏览器 ★★★★★ 
+                [ 当前在线：47人 ] [ 今日访问：284次 ] [ 总访问量：102,394次 ]
+            </marquee>
+        </div>
+        
+        <footer>
+            <p>© 1999-2025 张明的个人门户 - 最后更新：2025年10月11日 23:28</p>
+            <p>Email: webmaster@zhangming.com  | QQ: 12345678 | ICQ: 87654321 | MSN: zhangming@hotmail.com</p> 
+            <p>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4OCIgaGVpZ2h0PSIzMSIgdmlld0JveD0iMCAwIDg4IDMxIj4KICA8cmVjdCB3aWR0aD0iODgiIGhlaWdodD0iMzEiIGZpbGw9IiNmZmYiLz4KICA8dGV4dCB4PSI0NCIgeT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwMCI+PGltYWdlIHNyYz0iaHR0cDovL3d3dy5mcmVld2Vic2l0ZXMuY29tL2J1dHRvbnMiPjwvdGV4dD4KPC9zdmc+" alt="Free Web Hosting">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4OCIgaGVpZ2h0PSIzMSIgdmlld0JveD0iMCAwIDg4IDMxIj4KICA8cmVjdCB3aWR0aD0iODgiIGhlaWdodD0iMzEiIGZpbGw9IiNmZmYiLz4KICA8dGV4dCB4PSI0NCIgeT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwMCI+QmVzdCB2aWV3ZWQgd2l0aCBJRTwvdGV4dD4KPC9zdmc+" alt="Best viewed with IE">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4OCIgaGVpZ2h0PSIzMSIgdmlld0JveD0iMCAwIDg4IDMxIj4KICA8cmVjdCB3aWR0aD0iODgiIGhlaWdodD0iMzEiIGZpbGw9IiNmZmYiLz4KICA8dGV4dCB4PSI0NCIgeT0iMTkiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzAwMCI+VW5kZXIgQ29uc3RydWN0aW9uPC90ZXh0Pgo8L3N2Zz4=" alt="Under Construction">
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // 更新日期时间
+        function updateDateTime() {
+            const now = new Date();
+            const dateStr = `${now.getFullYear()} 年${now.getMonth()+1} 月${now.getDate()} 日`;
+            const timeStr = `${String(now.getHours()).padStart(2,  '0')}:${String(now.getMinutes()).padStart(2,  '0')}`;
+            
+            const dateElements = document.querySelectorAll('.date-display'); 
+            dateElements.forEach(el  => {
+                el.innerHTML  = `今天是<span class="blink">${dateStr} 星期${'日一二三四五六'[now.getDay()]}</span> 农历乙巳蛇年八月廿十 <span class="blink">${timeStr}</span>`;
+            });
+        }
+        
+        // 初始更新
+        updateDateTime();
+        
+        // 每分钟更新一次时间
+        setInterval(updateDateTime, 60000);
+        
+        // 闪烁效果
+        const blinkElements = document.querySelectorAll('.blink'); 
+        setInterval(() => {
+            blinkElements.forEach(el  => {
+                el.style.visibility  = el.style.visibility  === 'hidden' ? 'visible' : 'hidden';
+            });
+        }, 500);
+    </script>
+</body>
+</html>
