@@ -453,7 +453,7 @@ Shrine是位于秋叶原角落的小神社。它致力于2只猫，据说带来�
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "SK在此已祈祷 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+        document.getElementById("timeDate").innerHTML = "SK_SAMA_在此已祈祷 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
     }
 setInterval("createtime()",250);
 </script>
