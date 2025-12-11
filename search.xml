@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>置顶公告</title>
-    <url>/posts/homepage.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
-      </categories>
-  </entry>
-  <entry>
     <title>关于b站早期鬼畜视频</title>
     <url>/posts/blog/20250119.html</url>
     <content><![CDATA[]]></content>
@@ -22,47 +14,6 @@
     <content><![CDATA[]]></content>
       <categories>
         <category>教程记录</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>1.20.4 原版生存完结纪念</title>
-    <url>/posts/minecraft/Archive.20240823.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Minecraft 软件/工具/网站 集合</title>
-    <url>/posts/minecraft/Archive.20250105.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>宵宫：烟花来咯！</title>
-    <url>/posts/minecraft/Archive.20250416.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Minecraft</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>置顶公告(截止至20240617)</title>
-    <url>/posts/oldhomepages/homepage20240617.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>档案</category>
       </categories>
   </entry>
   <entry>
@@ -114,19 +65,48 @@
       </categories>
   </entry>
   <entry>
-    <title>原版血条！</title>
-    <url>/posts/minecraft/Archive.20250504.html</url>
+    <title>原神同人本大合集 (880本，PDF文档)</title>
+    <url>/posts/resource/p/20251127_genshin.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Minecraft</category>
+        <category>资源分享</category>
       </categories>
-      <tags>
-        <tag>Minecraft</tag>
-      </tags>
   </entry>
   <entry>
-    <title>一种基于展示实体的法阵</title>
-    <url>/posts/minecraft/Archive.20250611.html</url>
+    <title>置顶公告</title>
+    <url>/posts/blog/homepages/homepage20251211.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>档案</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HOME PAGE</title>
+    <url>/posts/blog/homepages/snow.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>档案</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>置顶公告(截止至20240617)</title>
+    <url>/posts/blog/homepages/homepage20240617.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>档案</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SKToolBox - 打包自己的单文件工具箱</title>
+    <url>/posts/blog/sktoolbox/index.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>教程记录</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>杂谈 · 其一 · 关于「像素画」的一些研究</title>
+    <url>/posts/mc/notes/1.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -137,7 +117,51 @@
   </entry>
   <entry>
     <title>以防你不知道我可以在MC里玩千恋万花</title>
-    <url>/posts/minecraft/Archive.20250705.html</url>
+    <url>/posts/mc/skdbox/index.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>宵宫：烟花来咯！</title>
+    <url>/posts/mc/skfirework/index.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>原版血条！</title>
+    <url>/posts/mc/skhealth/index.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一种基于展示实体的法阵</title>
+    <url>/posts/mc/skmagic/index.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Minecraft</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Minecraft 软件/工具/网站 集合</title>
+    <url>/posts/mc/tools_collection/index.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -148,7 +172,7 @@
   </entry>
   <entry>
     <title>像写诗一样制作可交互模型</title>
-    <url>/posts/minecraft/Archive.20250808.html</url>
+    <url>/posts/mc/skmws/index.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -158,16 +182,8 @@
       </tags>
   </entry>
   <entry>
-    <title>SKToolBox - 打包自己的单文件工具箱</title>
-    <url>/posts/blog/20251005.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>教程记录</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>杂谈 · 其一 · 关于「像素画」的一些研究</title>
-    <url>/posts/minecraft/Archive.20251006.html</url>
+    <title>1.20.4 原版生存完结纪念</title>
+    <url>/posts/mc/review/20240823.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
@@ -178,18 +194,10 @@
   </entry>
   <entry>
     <title>可爱CR酱</title>
-    <url>/posts/blog/20251026.html</url>
+    <url>/posts/mc/cutecr/index.html</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Minecraft</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>原神同人本大合集 (880本，PDF文档)</title>
-    <url>/posts/resource/p/20251127_genshin.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>资源分享</category>
       </categories>
   </entry>
 </search>
